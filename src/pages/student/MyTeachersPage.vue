@@ -24,7 +24,7 @@ const teacher: object[] = useTeacherStore().teachers
 </script>
 
 <template>
-<div class="tw-p-4">
+<div class="md:tw-p-4">
   <q-table
     title="My Teachers"
     :columns="TeachersColumns"

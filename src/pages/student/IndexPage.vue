@@ -29,7 +29,7 @@ const test: any = useTestStore().assessments;
 </script>
 
 <template>
-  <q-page class="tw-p-5">
+  <q-page class="md:tw-p-5">
     <bread-crumbs :navs="['Student', 'Home']" />
 
     <div class="nq-row q-py-md text-primary">

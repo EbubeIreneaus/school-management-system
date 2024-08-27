@@ -65,7 +65,7 @@ const newCourse = reactive({
 </script>
 
 <template>
-  <div class="tw-p-5">
+  <div class="md:tw-p-5">
     <BreadCrumbs :navs="['Student', 'Course Registeration']" />
   <div class="tw-flex tw-flex-col md:tw-flex-row tw-gap-5">
     <div class="tw-max-w-[350px] tw-w-full">
