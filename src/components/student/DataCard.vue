@@ -3,7 +3,7 @@ defineProps<{icon: string, iconText: string, content: string}>()
 </script>
 
 <template>
-  <q-card class="nq-flex items-center">
+  <q-card class="nq-flex items-center" square flat>
         <q-card-section class="text-center nq-flex-grow-1">
           <q-icon :name="icon" size="md" /> <br />
           <div class="text-capitalize">{{ iconText }}</div>

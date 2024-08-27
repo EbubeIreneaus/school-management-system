@@ -98,8 +98,8 @@ module.exports = configure(function (/* ctx */) {
           secondary: '#042954',
           accent: '#fdcd05',
 
-          dark: '#312d4b',
-          'dark-page': '#28243d',
+          dark: '#272B33',
+          'dark-page': '#282828',
 
           positive: '#21BA45',
           negative: '#C10015',
