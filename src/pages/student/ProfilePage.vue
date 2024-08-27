@@ -12,7 +12,7 @@ const student: any = get_student_or_404('0001')
 </script>
 
 <template>
-  <q-card class="q-ma-sm" flat>
+  <q-card class="q-ma-sm" flat square>
     <q-card-section>
       <div class=" text-body1">{{ student.firstname }} {{ student.lastname }}</div>
     </q-card-section>

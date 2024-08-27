@@ -11,7 +11,7 @@ const notices: any = useNoticeStore().notices;
   <div class="md:tw-p-5">
     <BreadCrumbs :navs="['Student', 'Notice Board']" />
 
-    <q-card>
+    <q-card flat square>
       <q-toolbar>
         <q-toolbar-title> Notice Board </q-toolbar-title>
       </q-toolbar>
