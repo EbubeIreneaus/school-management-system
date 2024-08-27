@@ -1,0 +1,272 @@
+import { defineStore } from 'pinia';
+import { ref } from 'vue';
+
+export const useTeacherStore = defineStore('teachers', () => {
+
+  const teachers = ref([
+    {
+      img: '/img/placeholder.png',
+      id: 'T001',
+      firstname: 'Alice',
+      lastname: 'Johnson',
+      gender: 'Female',
+      class: 'Grade 1',
+      section: 'A',
+      address: '789 Pine St',
+      dob: '1985-03-10',
+      mobile_no: '08123456703',
+      email: 'alice.johnson@example.com'
+    },
+    {
+      img: '/img/placeholder.png',
+      id: 'T002',
+      firstname: 'Michael',
+      lastname: 'Brown',
+      gender: 'Male',
+      class: 'Grade 2',
+      section: 'B',
+      address: '456 Elm St',
+      dob: '1987-05-22',
+      mobile_no: '08123456704',
+      email: 'michael.brown@example.com'
+    },
+    {
+      img: '/img/placeholder.png',
+      id: 'T003',
+      firstname: 'Olivia',
+      lastname: 'Martinez',
+      gender: 'Female',
+      class: 'Grade 3',
+      section: 'C',
+      address: '123 Cedar St',
+      dob: '1990-07-15',
+      mobile_no: '08123456705',
+      email: 'olivia.martinez@example.com'
+    },
+    {
+      img: '/img/placeholder.png',
+      id: 'T004',
+      firstname: 'Daniel',
+      lastname: 'Garcia',
+      gender: 'Male',
+      class: 'Grade 4',
+      section: 'D',
+      address: '789 Maple St',
+      dob: '1989-12-08',
+      mobile_no: '08123456706',
+      email: 'daniel.garcia@example.com'
+    },
+    {
+      img: '/img/placeholder.png',
+      id: 'T005',
+      firstname: 'Sophia',
+      lastname: 'Clark',
+      gender: 'Female',
+      class: 'Grade 5',
+      section: 'A',
+      address: '101 Fir St',
+      dob: '1988-10-03',
+      mobile_no: '08123456707',
+      email: 'sophia.clark@example.com'
+    },
+    {
+      img: '/img/placeholder.png',
+      id: 'T006',
+      firstname: 'James',
+      lastname: 'Lopez',
+      gender: 'Male',
+      class: 'Grade 6',
+      section: 'B',
+      address: '987 Oak St',
+      dob: '1986-01-23',
+      mobile_no: '08123456708',
+      email: 'james.lopez@example.com'
+    },
+    {
+      img: '/img/placeholder.png',
+      id: 'T007',
+      firstname: 'Mia',
+      lastname: 'Hernandez',
+      gender: 'Female',
+      class: 'Grade 7',
+      section: 'C',
+      address: '654 Ash St',
+      dob: '1992-04-18',
+      mobile_no: '08123456709',
+      email: 'mia.hernandez@example.com'
+    },
+    {
+      img: '/img/placeholder.png',
+      id: 'T008',
+      firstname: 'William',
+      lastname: 'King',
+      gender: 'Male',
+      class: 'Grade 8',
+      section: 'D',
+      address: '321 Birch St',
+      dob: '1983-11-29',
+      mobile_no: '08123456710',
+      email: 'william.king@example.com'
+    },
+    {
+      img: '/img/placeholder.png',
+      id: 'T009',
+      firstname: 'Isabella',
+      lastname: 'Allen',
+      gender: 'Female',
+      class: 'Grade 9',
+      section: 'A',
+      address: '987 Pine St',
+      dob: '1991-08-21',
+      mobile_no: '08123456711',
+      email: 'isabella.allen@example.com'
+    },
+    {
+      img: '/img/placeholder.png',
+      id: 'T010',
+      firstname: 'Liam',
+      lastname: 'Scott',
+      gender: 'Male',
+      class: 'Grade 10',
+      section: 'B',
+      address: '123 Elm St',
+      dob: '1980-02-05',
+      mobile_no: '08123456712',
+      email: 'liam.scott@example.com'
+    },
+    {
+      img: '/img/placeholder.png',
+      id: 'T011',
+      firstname: 'Ava',
+      lastname: 'Walker',
+      gender: 'Female',
+      class: 'Grade 1',
+      section: 'C',
+      address: '321 Cedar St',
+      dob: '1984-09-13',
+      mobile_no: '08123456713',
+      email: 'ava.walker@example.com'
+    },
+    {
+      img: '/img/placeholder.png',
+      id: 'T012',
+      firstname: 'Lucas',
+      lastname: 'Hall',
+      gender: 'Male',
+      class: 'Grade 2',
+      section: 'D',
+      address: '456 Birch St',
+      dob: '1987-06-14',
+      mobile_no: '08123456714',
+      email: 'lucas.hall@example.com'
+    },
+    {
+      img: '/img/placeholder.png',
+      id: 'T013',
+      firstname: 'Charlotte',
+      lastname: 'Young',
+      gender: 'Female',
+      class: 'Grade 3',
+      section: 'A',
+      address: '789 Spruce St',
+      dob: '1993-01-11',
+      mobile_no: '08123456715',
+      email: 'charlotte.young@example.com'
+    },
+    {
+      img: '/img/placeholder.png',
+      id: 'T014',
+      firstname: 'Noah',
+      lastname: 'Green',
+      gender: 'Male',
+      class: 'Grade 4',
+      section: 'B',
+      address: '321 Fir St',
+      dob: '1982-04-25',
+      mobile_no: '08123456716',
+      email: 'noah.green@example.com'
+    },
+    {
+      img: '/img/placeholder.png',
+      id: 'T015',
+      firstname: 'Amelia',
+      lastname: 'Adams',
+      gender: 'Female',
+      class: 'Grade 5',
+      section: 'C',
+      address: '456 Maple St',
+      dob: '1994-11-07',
+      mobile_no: '08123456717',
+      email: 'amelia.adams@example.com'
+    },
+    {
+      img: '/img/placeholder.png',
+      id: 'T016',
+      firstname: 'Elijah',
+      lastname: 'Nelson',
+      gender: 'Male',
+      class: 'Grade 6',
+      section: 'D',
+      address: '789 Ash St',
+      dob: '1981-12-15',
+      mobile_no: '08123456718',
+      email: 'elijah.nelson@example.com'
+    },
+    {
+      img: '/img/placeholder.png',
+      id: 'T017',
+      firstname: 'Mason',
+      lastname: 'Hill',
+      gender: 'Male',
+      class: 'Grade 7',
+      section: 'A',
+      address: '123 Birch St',
+      dob: '1985-05-02',
+      mobile_no: '08123456719',
+      email: 'mason.hill@example.com'
+    },
+    {
+      img: '/img/placeholder.png',
+      id: 'T018',
+      firstname: 'Emily',
+      lastname: 'Rodriguez',
+      gender: 'Female',
+      class: 'Grade 8',
+      section: 'B',
+      address: '987 Cedar St',
+      dob: '1992-03-21',
+      mobile_no: '08123456720',
+      email: 'emily.rodriguez@example.com'
+    },
+    {
+      img: '/img/placeholder.png',
+      id: 'T019',
+      firstname: 'Michael',
+      lastname: 'Garcia',
+      gender: 'Male',
+      class: 'Grade 9',
+      section: 'C',
+      address: '456 Pine St',
+      dob: '1986-07-18',
+      mobile_no: '08123456721',
+      email: 'michael.garcia@example.com'
+    },
+    {
+      img: '/img/placeholder.png',
+      id: 'T020',
+      firstname: 'Emma',
+      lastname: 'Lewis',
+      gender: 'Female',
+      class: 'Grade 10',
+      section: 'D',
+      address: '123 Oak St',
+      dob: '1990-09-30',
+      mobile_no: '08123456722',
+      email: 'emma.lewis@example.com'
+    }
+  ]);
+
+  return {
+    teachers
+  }
+});

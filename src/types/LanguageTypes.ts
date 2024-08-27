@@ -1,0 +1,1 @@
+export type LanguagesTypes = 'english' | 'igbo' | 'yoruba' | 'hausa' |'ijaw' | 'benin'
