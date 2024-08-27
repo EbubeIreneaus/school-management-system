@@ -90,6 +90,9 @@ const teacher: object[] = useTeacherStore().teachers;
       :bordered="false"
       separator="none"
       :rows-per-page-options="[25]"
+      flat
+      square
+     
     />
   </div>
 </template>

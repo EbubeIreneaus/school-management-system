@@ -11,7 +11,7 @@ const notices: any = useNoticeStore().notices
 </script>
 
 <template>
-  <q-page class="sm:tw-p-5 tw-p-2">
+  <q-page class="md:tw-p-5">
     <BreadCrumbs :navs="['Parent', 'Dashboard']" />
 
     <div class="tw-grid tw-grid-cols-12 tw-gap-x-3 tw-gap-y-5 tw-mb-5">

@@ -13,7 +13,7 @@ const parent: any = useParentStore().parents[1]
 <template>
   <q-page class="md:tw-p-4">
     <BreadCrumbs :navs="['Parent', 'My Profile']" />
-    <q-card class="q-ma-sm tw-min-h-[80dvh]" flat>
+    <q-card class="q-ma-sm tw-min-h-[80dvh]" flat square :bordered="false">
     <q-card-section class="">
       <q-toolbar>
         <q-toolbar-title>{{ parent.firstname }} {{ parent.lastname }}</q-toolbar-title>
