@@ -2,6 +2,9 @@ import { RouteRecordRaw } from 'vue-router';
 
 const routes: RouteRecordRaw[] = [
   {
+    path: '', component: () => import('pages/IndexPage.vue')
+  },
+  {
     path: '/student',
     component: () => import('layouts/StudentLayout.vue'),
     children: [
