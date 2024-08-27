@@ -1,0 +1,231 @@
+<template>
+  <q-layout view="lHh lpR fFf">
+    <q-header
+      elevated
+      class="q-py-xs"
+      :class="{ 'bg-dark': $q.dark.isActive }"
+      height-hint="58"
+    >
+      <q-toolbar>
+        <q-btn
+          flat
+          dense
+          round
+          @click="toggleLeftDrawer"
+          aria-label="Menu"
+          icon="menu"
+          :color="$q.dark.isActive ? 'primary' : 'dark'"
+        />
+
+        <div class="q-ml-xs" v-if="$q.screen.gt.xs">
+          <q-toolbar-title
+            shrink
+            class="text-weight-bold text-body2"
+            :class="{ 'text-dark': !$q.dark.isActive }"
+          >
+            Welcome Ebube
+          </q-toolbar-title>
+        </div>
+
+        <q-space />
+
+        <div
+          class="YL__toolbar-input-container row no-wrap"
+          v-if="$q.screen.gt.sm"
+        >
+          <q-input
+            dense
+            outlined
+            square
+            v-model="search"
+            placeholder="Search"
+            class="col"
+            :dark="$q.dark.isActive"
+          />
+          <q-btn class="YL__toolbar-input-btn" icon="search" unelevated />
+        </div>
+
+        <q-space />
+
+        <div class="q-gutter-sm row items-center no-wrap">
+          <q-btn-dropdown
+            icon="translate"
+            flat
+            :label="currentLanguage"
+            :color="$q.dark.isActive ? 'primary' : 'dark'"
+             v-if="$q.screen.gt.sm"
+          >
+            <q-list>
+              <q-item
+                clickable
+                v-close-popup
+                v-for="(language, index) in Languages"
+                :key="index"
+              >
+                <q-item-section>
+                  <q-item-label
+                    class="text-uppercase"
+                    @click="() => (currentLanguage = language)"
+                    >{{ language }}</q-item-label
+                  >
+                </q-item-section>
+              </q-item>
+            </q-list>
+            <q-tooltip>language</q-tooltip>
+          </q-btn-dropdown>
+
+          <q-btn
+            round
+            dense
+            flat
+            :color="$q.dark.isActive ? 'primary' : 'dark'"
+            :icon="$q.dark.isActive ? 'light_mode' : 'dark_mode'"
+            @click="$q.dark.toggle()"
+          >
+            <q-tooltip
+              >Turn on {{ $q.dark.isActive ? 'light' : 'dark' }} mode</q-tooltip
+            >
+          </q-btn>
+
+          <q-btn round dense flat icon="message" :color="$q.dark.isActive ? 'primary' : 'dark'">
+            <q-badge color="red" text-color="white" floating> 2 </q-badge>
+            <q-tooltip>Messages</q-tooltip>
+          </q-btn>
+
+          <q-btn round dense flat icon="notifications" :color="$q.dark.isActive ? 'primary' : 'dark'">
+            <q-badge color="red" text-color="white" floating> 2 </q-badge>
+            <q-tooltip>Notifications</q-tooltip>
+          </q-btn>
+
+          <q-btn round flat>
+            <q-avatar size="26px">
+              <img src="https://cdn.quasar.dev/img/boy-avatar.png" />
+            </q-avatar>
+            <q-tooltip>Account</q-tooltip>
+          </q-btn>
+        </div>
+      </q-toolbar>
+    </q-header>
+
+    <q-drawer
+      v-model="leftDrawerOpen"
+      show-if-above
+      bordered
+      class=""
+      :width="240"
+    >
+      <q-scroll-area class="fit">
+        <q-list padding>
+          <q-item
+            :to="link.href"
+            v-for="link in links1"
+            :key="link.text"
+            v-ripple
+            clickable
+          >
+            <q-item-section avatar>
+              <q-icon color="" :name="link.icon" />
+            </q-item-section>
+            <q-item-section>
+              <q-item-label>{{ link.text }}</q-item-label>
+            </q-item-section>
+          </q-item>
+
+          <q-separator class="q-my-md" />
+
+          <q-item
+            :to="link.href"
+            v-for="link in links2"
+            :key="link.text"
+            v-ripple
+            clickable
+          >
+            <q-item-section avatar>
+              <q-icon color="grey" :name="link.icon" />
+            </q-item-section>
+            <q-item-section>
+              <q-item-label>{{ link.text }}</q-item-label>
+            </q-item-section>
+          </q-item>
+
+          <q-separator class="q-mt-md q-mb-xs" />
+
+          <q-item :to="link.href" v-for="link in links3" :key="link.text" v-ripple clickable>
+            <q-item-section avatar>
+              <q-icon color="grey" :name="link.icon" />
+            </q-item-section>
+            <q-item-section>
+              <q-item-label>{{ link.text }}</q-item-label>
+            </q-item-section>
+          </q-item>
+
+          <q-separator class="q-mt-md q-mb-xs" />
+
+          <div class="q-py-md q-px-md text-grey-9">
+            <div class="row items-center q-gutter-x-sm q-gutter-y-xs">
+              <a
+                v-for="button in buttons2"
+                :key="button.text"
+                class="YL__drawer-footer-link"
+                href="javascript:void(0)"
+              >
+                {{ button.text }}
+              </a>
+            </div>
+          </div>
+        </q-list>
+      </q-scroll-area>
+    </q-drawer>
+
+    <q-page-container class="q-pa-md">
+      <router-view />
+    </q-page-container>
+
+    <q-footer>
+      <div>School Management System</div>
+    </q-footer>
+  </q-layout>
+</template>
+
+<script setup lang="ts">
+import { ref } from 'vue';
+import { Languages } from 'src/composables/Languages';
+// import { LanguagesTypes } from 'src/types/LanguageTypes';
+
+defineOptions({
+  name: 'StudentLayout',
+});
+
+const currentLanguage = ref<string>('english');
+
+const leftDrawerOpen = ref(false);
+const search = ref('');
+
+function toggleLeftDrawer() {
+  leftDrawerOpen.value = !leftDrawerOpen.value;
+}
+
+const links1 = [
+  { icon: 'home', text: 'Home', href: '/student/' },
+  { icon: 'person', text: 'Profile', href: '/student/profile' },
+  { icon: 'group', text: 'My Teachers', href: '/student/teachers' },
+
+];
+const links2 = [
+  { icon: 'folder', text: 'Library', href: '#' },
+  { icon: 'library_books', text: 'Subjects', href: '/student/myCourse' },
+  { icon: 'watch_later', text: 'Class Routine', href: '/student/class' },
+  { icon: 'quiz', text: 'Exams', href: '/student/exam' },
+];
+const links3 = [
+{ icon: 'info', text: 'Notice Board', href: '/student/notice' },
+  // { icon: 'message', text: 'Message' },
+  { icon: 'settings', text: 'Settings', href: '/student/settings' },
+];
+
+const buttons2 = [
+  { text: 'Terms' },
+  { text: 'Privacy' },
+  { text: 'Policy & Safety' },
+];
+</script>

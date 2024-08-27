@@ -1,9 +1,11 @@
 <!-- eslint-disable vue/no-mutating-props -->
 <script lang="ts" setup>
 import { reactive, ref } from 'vue';
+import { useRouter } from 'vue-router';
 
 defineEmits(['close'])
 const op  = ref(true)
+const $router = useRouter()
 
 const authForm: { email: string; password: string } = reactive({
   email: '',
@@ -41,7 +43,7 @@ const authForm: { email: string; password: string } = reactive({
       </q-card-section>
       <q-card-section>
           <div class="block">
-            <q-btn label="Submit" />
+            <q-btn label="Submit" @click="$router.push('/parent')" />
           </div>
           <br />
           <div class="block text-center q-mb-md">
