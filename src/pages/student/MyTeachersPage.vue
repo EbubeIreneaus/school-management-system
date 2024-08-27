@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { QTableColumn } from 'quasar';
 import { useTeacherStore } from 'src/stores/Teachers';
+import BreadCrumbs from 'src/components/BreadCrumbs.vue';
 
 const TeachersColumns: QTableColumn[] = [
   {
@@ -25,6 +26,7 @@ const teacher: object[] = useTeacherStore().teachers
 
 <template>
 <div class="md:tw-p-4">
+  <BreadCrumbs :navs="['Student', 'My Teachers']" />
   <q-table
     title="My Teachers"
     :columns="TeachersColumns"
