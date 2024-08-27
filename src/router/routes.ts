@@ -54,7 +54,8 @@ const routes: RouteRecordRaw[] = [
       },
       {path: 'expenses', component: () => import('pages/parent/AllExpensesPage.vue')},
       {path: 'notice', component: () => import('pages/parent/NoticeBoard.vue')},
-      {path: 'settings', component: () => import('pages/parent/SettingPage.vue')}
+      {path: 'settings', component: () => import('pages/parent/SettingPage.vue')},
+      {path: 'message', component: () => import('pages/parent/MessagePage.vue')}
     ],
   },
   {

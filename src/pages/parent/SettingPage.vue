@@ -7,7 +7,7 @@ const parent: any = useParentStore().parents[2]
 </script>
 
 <template>
-  <div class="md:tw-p-5">
+  <div class="tw-p-4">
     <BreadCrumbs :navs="['Parent', 'Settings']" />
     <form>
       <fieldset>

@@ -7,7 +7,7 @@ const student: any = useStudentStore().get_student_or_404('0001');
 </script>
 
 <template>
-  <div class="md:tw-p-5">
+  <div class="tw-p-4">
     <BreadCrumbs :navs="['Student', 'Settings']" />
     <form>
       <fieldset>
