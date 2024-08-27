@@ -193,7 +193,7 @@ import { Languages } from 'src/composables/Languages';
 // import { LanguagesTypes } from 'src/types/LanguageTypes';
 
 defineOptions({
-  name: 'StudentLayout',
+  name: 'ParentLayout',
 });
 
 const currentLanguage = ref<string>('english');
@@ -206,21 +206,19 @@ function toggleLeftDrawer() {
 }
 
 const links1 = [
-  { icon: 'home', text: 'Home', href: '/student/' },
-  { icon: 'person', text: 'Profile', href: '/student/profile' },
-  { icon: 'group', text: 'My Teachers', href: '/student/teachers' },
+  { icon: 'home', text: 'Home', href: '/parent/' },
+  { icon: 'person', text: 'Profile', href: '/parent/profile' },
+  { icon: 'group', text: 'All Teachers', href: '/parent/teachers' },
 
 ];
 const links2 = [
-  { icon: 'folder', text: 'Library', href: '#' },
-  { icon: 'library_books', text: 'Subjects', href: '/student/myCourse' },
-  { icon: 'watch_later', text: 'Class Routine', href: '/student/class' },
-  { icon: 'quiz', text: 'Exams', href: '/student/exam' },
+  { icon: 'payments', text: 'All Expenses', href: '/parent/expenses' },
+  { icon: 'quiz', text: 'Exams', href: '/parent/exam' },
 ];
 const links3 = [
-{ icon: 'info', text: 'Notice Board', href: '/student/notice' },
-  // { icon: 'message', text: 'Message' },
-  { icon: 'settings', text: 'Settings', href: '/student/settings' },
+{ icon: 'info', text: 'Notice Board', href: '/parent/notice' },
+  { icon: 'message', text: 'Message', href: '/parent/message' },
+  { icon: 'settings', text: 'Settings', href: '/parent/settings' },
 ];
 
 const buttons2 = [

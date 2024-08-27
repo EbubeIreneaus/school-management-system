@@ -60,10 +60,11 @@ const Expenses = [
     :rows="Expenses"
     title="This Term Expense"
     row-key="id"
-    :rows-per-page-options="[isComp?10:40]"
+    :rows-per-page-options="[isComp?10:40, 100]"
     square
     flat
     separator="none"
+    :class="{'tw-min-h-[72dvh]': !isComp}"
   >
   </q-table>
 </template>

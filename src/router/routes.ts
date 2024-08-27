@@ -42,6 +42,19 @@ const routes: RouteRecordRaw[] = [
     component: () => import('layouts/ParentLayout.vue'),
     children: [
       { path: '', component: () => import('pages/parent/IndexPage.vue') },
+      {
+        path: 'teachers',
+        component: () => import('pages/parent/AllTeachersPage.vue'),
+      },
+      {
+        path: 'profile', component: () => import('pages/parent/ProfilePage.vue')
+      },
+      {
+        path: 'exam', component: () => import('pages/parent/ExamTable.vue')
+      },
+      {path: 'expenses', component: () => import('pages/parent/AllExpensesPage.vue')},
+      {path: 'notice', component: () => import('pages/parent/NoticeBoard.vue')},
+      {path: 'settings', component: () => import('pages/parent/SettingPage.vue')}
     ],
   },
   {
