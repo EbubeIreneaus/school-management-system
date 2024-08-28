@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh lpR fFf">
+  <q-layout view="lHh LpR fFf" :class="{'bg-primary': !$q.dark.isActive}">
     <q-header
       elevated
       class="q-py-xs"
@@ -53,7 +53,7 @@
             flat
             :label="currentLanguage"
             :color="$q.dark.isActive ? 'primary' : 'dark'"
-             v-if="$q.screen.gt.sm"
+            v-if="$q.screen.gt.sm"
           >
             <q-list>
               <q-item
@@ -87,12 +87,24 @@
             >
           </q-btn>
 
-          <q-btn round dense flat icon="message" :color="$q.dark.isActive ? 'primary' : 'dark'">
+          <q-btn
+            round
+            dense
+            flat
+            icon="message"
+            :color="$q.dark.isActive ? 'primary' : 'dark'"
+          >
             <q-badge color="red" text-color="white" floating> 2 </q-badge>
             <q-tooltip>Messages</q-tooltip>
           </q-btn>
 
-          <q-btn round dense flat icon="notifications" :color="$q.dark.isActive ? 'primary' : 'dark'">
+          <q-btn
+            round
+            dense
+            flat
+            icon="notifications"
+            :color="$q.dark.isActive ? 'primary' : 'dark'"
+          >
             <q-badge color="red" text-color="white" floating> 2 </q-badge>
             <q-tooltip>Notifications</q-tooltip>
           </q-btn>
@@ -111,10 +123,14 @@
       v-model="leftDrawerOpen"
       show-if-above
       bordered
-      class=""
+      :class="{'bg-primary': !$q.dark.isActive}"
       :width="240"
+
     >
       <q-scroll-area class="fit">
+        <q-section>
+          <ProfileCard role="parent" />
+        </q-section>
         <q-list padding>
           <q-item
             :to="link.href"
@@ -122,9 +138,11 @@
             :key="link.text"
             v-ripple
             clickable
+            active-class="none"
+            exact-active-class="text-accent"
           >
             <q-item-section avatar>
-              <q-icon color="" :name="link.icon" />
+              <q-icon color="grey" :name="link.icon" />
             </q-item-section>
             <q-item-section>
               <q-item-label>{{ link.text }}</q-item-label>
@@ -139,6 +157,8 @@
             :key="link.text"
             v-ripple
             clickable
+            active-class="none"
+            exact-active-class="text-accent"
           >
             <q-item-section avatar>
               <q-icon color="grey" :name="link.icon" />
@@ -150,7 +170,15 @@
 
           <q-separator class="q-mt-md q-mb-xs" />
 
-          <q-item :to="link.href" v-for="link in links3" :key="link.text" v-ripple clickable>
+          <q-item
+            :to="link.href"
+            v-for="link in links3"
+            :key="link.text"
+            v-ripple
+            clickable
+            active-class="none"
+            exact-active-class="text-accent"
+          >
             <q-item-section avatar>
               <q-icon color="grey" :name="link.icon" />
             </q-item-section>
@@ -181,15 +209,15 @@
       <router-view />
     </q-page-container>
 
-    <q-footer>
-      <div>School Management System</div>
-    </q-footer>
+    <FooterComponent />
   </q-layout>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
 import { Languages } from 'src/composables/Languages';
+import FooterComponent from 'src/components/FooterComponent.vue';
+import ProfileCard from 'src/components/ProfileCard.vue';
 // import { LanguagesTypes } from 'src/types/LanguageTypes';
 
 defineOptions({
@@ -209,14 +237,13 @@ const links1 = [
   { icon: 'home', text: 'Home', href: '/parent/' },
   { icon: 'person', text: 'Profile', href: '/parent/profile' },
   { icon: 'group', text: 'All Teachers', href: '/parent/teachers' },
-
 ];
 const links2 = [
   { icon: 'payments', text: 'All Expenses', href: '/parent/expenses' },
   { icon: 'quiz', text: 'Exams', href: '/parent/exam' },
 ];
 const links3 = [
-{ icon: 'info', text: 'Notice Board', href: '/parent/notice' },
+  { icon: 'info', text: 'Notice Board', href: '/parent/notice' },
   { icon: 'message', text: 'Message', href: '/parent/message' },
   { icon: 'settings', text: 'Settings', href: '/parent/settings' },
 ];

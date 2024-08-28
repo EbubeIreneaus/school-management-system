@@ -65,6 +65,8 @@ const Expenses = [
     flat
     separator="none"
     :class="{'tw-min-h-[72dvh]': !isComp}"
+    :grid="!isComp"
+    grid-header
   >
   </q-table>
 </template>

@@ -92,7 +92,7 @@ const teacher: object[] = useTeacherStore().teachers;
       :rows-per-page-options="[25]"
       flat
       square
-     
+
     />
   </div>
 </template>
