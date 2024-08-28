@@ -5,6 +5,7 @@ const routes: RouteRecordRaw[] = [
     path: '',
     component: () => import('pages/IndexPage.vue'),
   },
+  // student
   {
     path: '/student',
     component: () => import('layouts/StudentLayout.vue'),
@@ -37,6 +38,7 @@ const routes: RouteRecordRaw[] = [
       },
     ],
   },
+  // parent
   {
     path: '/parent',
     component: () => import('layouts/ParentLayout.vue'),
@@ -57,6 +59,14 @@ const routes: RouteRecordRaw[] = [
       {path: 'settings', component: () => import('pages/parent/SettingPage.vue')},
       {path: 'message', component: () => import('pages/parent/MessagePage.vue')}
     ],
+  },
+  // administrative
+  {
+    path: '/admin',
+    component: ()=> import('layouts/AdminLayout.vue'),
+    children: [
+      {path: '', component: () => import('pages/admin/IndexPage.vue')}
+    ]
   },
   {
     path: '/auth/',

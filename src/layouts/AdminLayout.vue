@@ -129,7 +129,7 @@
     >
       <q-scroll-area class="fit">
         <q-section>
-          <ProfileCard role="parent" />
+          <ProfileCard role="administative" />
         </q-section>
         <q-list padding>
           <q-item
@@ -221,7 +221,7 @@ import ProfileCard from 'src/components/ProfileCard.vue';
 // import { LanguagesTypes } from 'src/types/LanguageTypes';
 
 defineOptions({
-  name: 'ParentLayout',
+  name: 'AdminLayout',
 });
 
 const currentLanguage = ref<string>('english');
@@ -234,18 +234,18 @@ function toggleLeftDrawer() {
 }
 
 const links1 = [
-  { icon: 'home', text: 'Home', href: '/parent/' },
-  { icon: 'person', text: 'Profile', href: '/parent/profile' },
-  { icon: 'group', text: 'All Teachers', href: '/parent/teachers' },
+  { icon: 'home', text: 'Home', href: '/admin/' },
+  { icon: 'person', text: 'Profile', href: '/admin/profile' },
+  { icon: 'group', text: 'All Teachers', href: '/admin/teachers' },
 ];
 const links2 = [
-  { icon: 'payments', text: 'All Expenses', href: '/parent/expenses' },
-  { icon: 'quiz', text: 'Exams', href: '/parent/exam' },
+  { icon: 'payments', text: 'All Expenses', href: '/admin/expenses' },
+  { icon: 'quiz', text: 'Exams', href: '/admin/exam' },
 ];
 const links3 = [
-  { icon: 'info', text: 'Notice Board', href: '/parent/notice' },
-  { icon: 'message', text: 'Message', href: '/parent/message' },
-  { icon: 'settings', text: 'Settings', href: '/parent/settings' },
+  { icon: 'info', text: 'Notice Board', href: '/admin/notice' },
+  { icon: 'message', text: 'Message', href: '/admin/message' },
+  { icon: 'settings', text: 'Settings', href: '/admin/settings' },
 ];
 
 const buttons2 = [

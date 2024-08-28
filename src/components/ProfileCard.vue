@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineProps<{role: 'student'|'parent'|'staff'}>()
+defineProps<{role: 'student'|'parent'|'staff'|'administative'}>()
 </script>
 
 <template>
