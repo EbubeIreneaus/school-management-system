@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh LpR lFf" :class="{'bg-primary': !$q.dark.isActive}">
+  <q-layout view="lHh LpR lff" :class="{'bg-primary': !$q.dark.isActive}">
     <q-header
       elevated
       class="q-py-xs"
