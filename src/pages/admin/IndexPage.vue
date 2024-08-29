@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import BreadCrumbs from 'src/components/BreadCrumbs.vue';
+import CalendarEvent from 'src/components/CalendarEvent.vue';
 import OverviewChart from 'src/components/Charts/OverviewChart.vue';
 import SocialMediaCard from 'src/components/SocialMediaCard.vue';
 import DataCard from 'src/components/admin/DataCard.vue';
@@ -48,6 +49,12 @@ import DataCard from 'src/components/admin/DataCard.vue';
       <div class="tw-col-span-6">
         <SocialMediaCard />
       </div>
+    </div>
+
+    <div class="tw-grid md:tw-grid-cols-2">
+    <div class="md:tw-p-4">
+      <CalendarEvent />
+    </div>
     </div>
   </q-page>
 </template>
