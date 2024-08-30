@@ -19,7 +19,7 @@ import BreadCrumbs from 'src/components/BreadCrumbs.vue';
           </div>
         </q-card-section>
         <q-card-section>
-          <div class="tw-grid tw-grid-cols-2 tw-gap-y-7 tw-gap-x-2 md:tw-gap-x-0">
+          <div class="tw-grid sm:tw-grid-cols-2 tw-gap-y-7 tw-gap-x-2 md:tw-gap-x-0">
 
             <div>
               <div class="text-body1">#VC1283499</div>
