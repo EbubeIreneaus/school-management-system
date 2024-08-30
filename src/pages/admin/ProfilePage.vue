@@ -9,7 +9,7 @@ import BreadCrumbs from 'src/components/BreadCrumbs.vue';
     <BreadCrumbs :navs="['Administration', 'My Profile']" />
 
     <div class="">
-      <q-card flat :bordered="false" class=" tw-my-7 ">
+      <q-card flat :bordered="false" class=" md:tw-my-7 ">
         <q-card-section>
           <div >
             <q-img class="tw-w-20 tw-h-20" src="/img/placeholder.png" />
@@ -19,7 +19,7 @@ import BreadCrumbs from 'src/components/BreadCrumbs.vue';
           </div>
         </q-card-section>
         <q-card-section>
-          <div class="tw-grid tw-grid-cols-2 tw-gap-y-7">
+          <div class="tw-grid tw-grid-cols-2 tw-gap-y-7 tw-gap-x-2 md:tw-gap-x-0">
 
             <div>
               <div class="text-body1">#VC1283499</div>
