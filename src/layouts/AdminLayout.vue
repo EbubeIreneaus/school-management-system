@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh LpR lff" :class="{'bg-primary': !$q.dark.isActive}">
+  <q-layout view="lHh LpR lff" :class="{ 'bg-primary': !$q.dark.isActive }">
     <q-header
       elevated
       class="q-py-xs"
@@ -123,68 +123,273 @@
       v-model="leftDrawerOpen"
       show-if-above
       bordered
-      :class="{'bg-primary': !$q.dark.isActive}"
+      :class="{ 'bg-primary': !$q.dark.isActive }"
       :width="240"
-
     >
       <q-scroll-area class="fit">
         <q-section>
           <ProfileCard role="administative" />
         </q-section>
         <q-list padding>
+          <!-- Navigation Links 1st section -->
           <q-item
-            :to="link.href"
-            v-for="link in links1"
-            :key="link.text"
+            to="/admin/"
             v-ripple
             clickable
             active-class="none"
             exact-active-class="text-accent"
           >
-            <q-item-section avatar>
-              <q-icon color="grey" :name="link.icon" />
-            </q-item-section>
-            <q-item-section>
-              <q-item-label>{{ link.text }}</q-item-label>
-            </q-item-section>
+            <q-item-section avatar
+              ><q-icon name="home" color="grey"
+            /></q-item-section>
+            <q-item-section><q-item-label>Home</q-item-label></q-item-section>
+          </q-item>
+
+          <q-item
+            to="/admin/profile"
+            v-ripple
+            clickable
+            active-class="none"
+            exact-active-class="text-accent"
+          >
+            <q-item-section avatar
+              ><q-icon name="person" color="grey"
+            /></q-item-section>
+            <q-item-section
+              ><q-item-label>Profile</q-item-label></q-item-section
+            >
           </q-item>
 
           <q-separator class="q-my-md" />
+            <q-expansion-item label="Students" icon="school" group="navgroup">
+              <q-list class="tw-px-1">
+                <q-item
+                  to="/admin/student/new"
+                  v-ripple
+                  clickable
+                  active-class="none"
+                  exact-active-class="text-accent"
+                >
+                  <q-item-section avatar
+                    ><q-icon name="person_add" color="grey"
+                  /></q-item-section>
+                  <q-item-section
+                    ><q-item-label>New Student</q-item-label></q-item-section
+                  >
+                </q-item>
+                <q-item
+                  to="/admin/student/all"
+                  v-ripple
+                  clickable
+                  active-class="none"
+                  exact-active-class="text-accent"
+                >
+                  <q-item-section avatar
+                    ><q-icon name="groups" color="grey"
+                  /></q-item-section>
+                  <q-item-section
+                    ><q-item-label>All Student</q-item-label></q-item-section
+                  >
+                </q-item>
+                <q-item
+                  to="/admin/student/search"
+                  v-ripple
+                  clickable
+                  active-class="none"
+                  exact-active-class="text-accent"
+                >
+                  <q-item-section avatar
+                    ><q-icon name="engineering" color="grey"
+                  /></q-item-section>
+                  <q-item-section
+                    ><q-item-label>Search </q-item-label></q-item-section
+                  >
+                </q-item>
+              </q-list>
+            </q-expansion-item>
 
-          <q-item
-            :to="link.href"
-            v-for="link in links2"
-            :key="link.text"
-            v-ripple
-            clickable
-            active-class="none"
-            exact-active-class="text-accent"
-          >
-            <q-item-section avatar>
-              <q-icon color="grey" :name="link.icon" />
-            </q-item-section>
-            <q-item-section>
-              <q-item-label>{{ link.text }}</q-item-label>
-            </q-item-section>
-          </q-item>
+            <q-expansion-item label="Teachers" icon="fa-solid fa-person-chalkboard" group="navgroup" >
+              <q-list class="tw-px-1">
+                <q-item
+                  to="/admin/teacher/new"
+                  v-ripple
+                  clickable
+                  active-class="none"
+                  exact-active-class="text-accent"
+                >
+                  <q-item-section avatar
+                    ><q-icon name="person_add" color="grey"
+                  /></q-item-section>
+                  <q-item-section
+                    ><q-item-label>New Teacher</q-item-label></q-item-section
+                  >
+                </q-item>
+                <q-item
+                  to="/admin/teacher/all"
+                  v-ripple
+                  clickable
+                  active-class="none"
+                  exact-active-class="text-accent"
+                >
+                  <q-item-section avatar
+                    ><q-icon name="groups" color="grey"
+                  /></q-item-section>
+                  <q-item-section
+                    ><q-item-label>All Teachers</q-item-label></q-item-section
+                  >
+                </q-item>
+                <q-item
+                  to="/admin/teacher/search"
+                  v-ripple
+                  clickable
+                  active-class="none"
+                  exact-active-class="text-accent"
+                >
+                  <q-item-section avatar
+                    ><q-icon name="engineering" color="grey"
+                  /></q-item-section>
+                  <q-item-section
+                    ><q-item-label>Search </q-item-label></q-item-section
+                  >
+                </q-item>
+              </q-list>
+            </q-expansion-item>
+
+            <q-expansion-item label="Parents" icon="supervisor_account" group="navgroup">
+              <q-list class="tw-px-1">
+                <q-item
+                  to="/admin/parent/new"
+                  v-ripple
+                  clickable
+                  active-class="none"
+                  exact-active-class="text-accent"
+                >
+                  <q-item-section avatar
+                    ><q-icon name="group_add" color="grey"
+                  /></q-item-section>
+                  <q-item-section
+                    ><q-item-label>New Parent</q-item-label></q-item-section
+                  >
+                </q-item>
+                <q-item
+                  to="/admin/parent/all"
+                  v-ripple
+                  clickable
+                  active-class="none"
+                  exact-active-class="text-accent"
+                >
+                  <q-item-section avatar
+                    ><q-icon name="diversity_3" color="grey"
+                  /></q-item-section>
+                  <q-item-section
+                    ><q-item-label>All Teachers</q-item-label></q-item-section
+                  >
+                </q-item>
+                <q-item
+                  to="/admin/parent/search"
+                  v-ripple
+                  clickable
+                  active-class="none"
+                  exact-active-class="text-accent"
+                >
+                  <q-item-section avatar
+                    ><q-icon name="engineering" color="grey"
+                  /></q-item-section>
+                  <q-item-section
+                    ><q-item-label>Search </q-item-label></q-item-section
+                  >
+                </q-item>
+              </q-list>
+            </q-expansion-item>
+
+            <q-expansion-item label="Staffs" icon="fa-solid fa-user-shield" group="navgroup">
+              <q-list class="tw-px-1">
+                <q-item
+                  to="/admin/staff/new"
+                  v-ripple
+                  clickable
+                  active-class="none"
+                  exact-active-class="text-accent"
+                >
+                  <q-item-section avatar
+                    ><q-icon name="fa-solid fa-user-plus" color="grey"
+                  /></q-item-section>
+                  <q-item-section
+                    ><q-item-label>New Teacher</q-item-label></q-item-section
+                  >
+                </q-item>
+                <q-item
+                  to="/admin/staff/all"
+                  v-ripple
+                  clickable
+                  active-class="none"
+                  exact-active-class="text-accent"
+                >
+                  <q-item-section avatar
+                    ><q-icon name="fa-solid fa-users" color="grey"
+                  /></q-item-section>
+                  <q-item-section
+                    ><q-item-label>All Staffs</q-item-label></q-item-section
+                  >
+                </q-item>
+                <q-item
+                  to="/admin/staff/search"
+                  v-ripple
+                  clickable
+                  active-class="none"
+                  exact-active-class="text-accent"
+                >
+                  <q-item-section avatar
+                    ><q-icon name="fa-solid fa-user-gear" color="grey"
+                  /></q-item-section>
+                  <q-item-section
+                    ><q-item-label>Search </q-item-label></q-item-section
+                  >
+                </q-item>
+              </q-list>
+            </q-expansion-item>
 
           <q-separator class="q-mt-md q-mb-xs" />
 
           <q-item
-            :to="link.href"
-            v-for="link in links3"
-            :key="link.text"
+            to="/admin/notice"
             v-ripple
             clickable
             active-class="none"
             exact-active-class="text-accent"
           >
-            <q-item-section avatar>
-              <q-icon color="grey" :name="link.icon" />
-            </q-item-section>
-            <q-item-section>
-              <q-item-label>{{ link.text }}</q-item-label>
-            </q-item-section>
+            <q-item-section avatar
+              ><q-icon name="notifications" color="grey"
+            /></q-item-section>
+            <q-item-section><q-item-label>Notice & Notiication</q-item-label></q-item-section>
+          </q-item>
+
+          <q-item
+            to="/admin/message"
+            v-ripple
+            clickable
+            active-class="none"
+            exact-active-class="text-accent"
+          >
+            <q-item-section avatar
+              ><q-icon name="message" color="grey"
+            /></q-item-section>
+            <q-item-section><q-item-label>Messages</q-item-label></q-item-section>
+          </q-item>
+
+          <q-item
+            to="/admin/settings"
+            v-ripple
+            clickable
+            active-class="none"
+            exact-active-class="text-accent"
+          >
+            <q-item-section avatar
+              ><q-icon name="admin_panel_settings" color="grey"
+            /></q-item-section>
+            <q-item-section
+              ><q-item-label>Settings</q-item-label></q-item-section
+            >
           </q-item>
 
           <q-separator class="q-mt-md q-mb-xs" />
@@ -232,21 +437,6 @@ const search = ref('');
 function toggleLeftDrawer() {
   leftDrawerOpen.value = !leftDrawerOpen.value;
 }
-
-const links1 = [
-  { icon: 'home', text: 'Home', href: '/admin/' },
-  { icon: 'person', text: 'Profile', href: '/admin/profile' },
-  { icon: 'group', text: 'All Teachers', href: '/admin/teachers' },
-];
-const links2 = [
-  { icon: 'payments', text: 'All Expenses', href: '/admin/expenses' },
-  { icon: 'quiz', text: 'Exams', href: '/admin/exam' },
-];
-const links3 = [
-  { icon: 'info', text: 'Notice Board', href: '/admin/notice' },
-  { icon: 'message', text: 'Message', href: '/admin/message' },
-  { icon: 'settings', text: 'Settings', href: '/admin/settings' },
-];
 
 const buttons2 = [
   { text: 'Terms' },
