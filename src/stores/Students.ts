@@ -1,6 +1,8 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
 
+export type searchParams = string | null;
+
 export const useStudentStore = defineStore('students', () => {
   const students = ref([
     {
@@ -11,12 +13,12 @@ export const useStudentStore = defineStore('students', () => {
       gender: 'Male',
       parent_id: 'P001',
       parent_name: 'Jane Doe',
-      class: 'Grade 1',
+      class: 'JSS1',
       section: 'A',
       address: '123 Main St',
       dob: '2012-04-12',
       mobile_no: '08123456701',
-      email: 'john.doe@example.com'
+      email: 'john.doe@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -26,12 +28,12 @@ export const useStudentStore = defineStore('students', () => {
       gender: 'Female',
       parent_id: 'P002',
       parent_name: 'Paul Smith',
-      class: 'Grade 1',
+      class: 'SS1',
       section: 'B',
       address: '456 Oak St',
       dob: '2012-06-23',
       mobile_no: '08123456702',
-      email: 'emma.smith@example.com'
+      email: 'emma.smith@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -41,12 +43,12 @@ export const useStudentStore = defineStore('students', () => {
       gender: 'Female',
       parent_id: 'P003',
       parent_name: 'Peter Johnson',
-      class: 'Grade 2',
+      class: 'SS2',
       section: 'C',
       address: '789 Maple St',
       dob: '2011-01-15',
       mobile_no: '08123456703',
-      email: 'olivia.johnson@example.com'
+      email: 'olivia.johnson@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -56,12 +58,12 @@ export const useStudentStore = defineStore('students', () => {
       gender: 'Male',
       parent_id: 'P004',
       parent_name: 'Emily Brown',
-      class: 'Grade 2',
+      class: 'SS2',
       section: 'D',
       address: '101 Birch St',
       dob: '2011-08-30',
       mobile_no: '08123456704',
-      email: 'noah.brown@example.com'
+      email: 'noah.brown@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -71,12 +73,12 @@ export const useStudentStore = defineStore('students', () => {
       gender: 'Male',
       parent_id: 'P005',
       parent_name: 'Sophia Jones',
-      class: 'Grade 3',
+      class: 'SS3',
       section: 'A',
       address: '102 Cedar St',
       dob: '2010-03-22',
       mobile_no: '08123456705',
-      email: 'liam.jones@example.com'
+      email: 'liam.jones@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -86,12 +88,12 @@ export const useStudentStore = defineStore('students', () => {
       gender: 'Female',
       parent_id: 'P006',
       parent_name: 'David Garcia',
-      class: 'Grade 3',
+      class: 'SS3',
       section: 'B',
       address: '103 Pine St',
       dob: '2010-09-11',
       mobile_no: '08123456706',
-      email: 'sophia.garcia@example.com'
+      email: 'sophia.garcia@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -101,12 +103,12 @@ export const useStudentStore = defineStore('students', () => {
       gender: 'Male',
       parent_id: 'P007',
       parent_name: 'Maria Martinez',
-      class: 'Grade 4',
+      class: 'JSS2',
       section: 'C',
       address: '104 Elm St',
       dob: '2009-05-14',
       mobile_no: '08123456707',
-      email: 'lucas.martinez@example.com'
+      email: 'lucas.martinez@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -116,12 +118,12 @@ export const useStudentStore = defineStore('students', () => {
       gender: 'Female',
       parent_id: 'P008',
       parent_name: 'James Lee',
-      class: 'Grade 4',
+      class: 'JSS2',
       section: 'D',
       address: '105 Spruce St',
       dob: '2009-12-01',
       mobile_no: '08123456708',
-      email: 'mia.lee@example.com'
+      email: 'mia.lee@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -131,12 +133,12 @@ export const useStudentStore = defineStore('students', () => {
       gender: 'Male',
       parent_id: 'P009',
       parent_name: 'Lisa Clark',
-      class: 'Grade 5',
+      class: 'JSS3',
       section: 'A',
       address: '106 Fir St',
       dob: '2008-07-08',
       mobile_no: '08123456709',
-      email: 'mason.clark@example.com'
+      email: 'mason.clark@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -146,12 +148,12 @@ export const useStudentStore = defineStore('students', () => {
       gender: 'Female',
       parent_id: 'P010',
       parent_name: 'Richard Lewis',
-      class: 'Grade 5',
+      class: 'JSS3',
       section: 'B',
       address: '107 Ash St',
       dob: '2008-11-22',
       mobile_no: '08123456710',
-      email: 'isabella.lewis@example.com'
+      email: 'isabella.lewis@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -161,12 +163,12 @@ export const useStudentStore = defineStore('students', () => {
       gender: 'Male',
       parent_id: 'P011',
       parent_name: 'Nancy Walker',
-      class: 'Grade 6',
+      class: 'JSS1',
       section: 'C',
       address: '108 Cedar St',
       dob: '2007-02-13',
       mobile_no: '08123456711',
-      email: 'ethan.walker@example.com'
+      email: 'ethan.walker@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -176,12 +178,12 @@ export const useStudentStore = defineStore('students', () => {
       gender: 'Female',
       parent_id: 'P012',
       parent_name: 'Christopher Hall',
-      class: 'Grade 6',
+      class: 'JSS1',
       section: 'D',
       address: '109 Cherry St',
       dob: '2007-10-07',
       mobile_no: '08123456712',
-      email: 'ava.hall@example.com'
+      email: 'ava.hall@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -191,12 +193,12 @@ export const useStudentStore = defineStore('students', () => {
       gender: 'Male',
       parent_id: 'P013',
       parent_name: 'Laura Allen',
-      class: 'Grade 7',
+      class: 'JSS1',
       section: 'A',
       address: '110 Maple St',
       dob: '2006-03-30',
       mobile_no: '08123456713',
-      email: 'james.allen@example.com'
+      email: 'james.allen@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -206,12 +208,12 @@ export const useStudentStore = defineStore('students', () => {
       gender: 'Female',
       parent_id: 'P014',
       parent_name: 'Charles Young',
-      class: 'Grade 7',
+      class: 'JSS1',
       section: 'B',
       address: '111 Birch St',
       dob: '2006-08-18',
       mobile_no: '08123456714',
-      email: 'charlotte.young@example.com'
+      email: 'charlotte.young@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -221,12 +223,12 @@ export const useStudentStore = defineStore('students', () => {
       gender: 'Male',
       parent_id: 'P015',
       parent_name: 'Karen Hernandez',
-      class: 'Grade 8',
+      class: 'SS3',
       section: 'C',
       address: '112 Oak St',
       dob: '2005-11-27',
       mobile_no: '08123456715',
-      email: 'alexander.hernandez@example.com'
+      email: 'alexander.hernandez@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -236,12 +238,12 @@ export const useStudentStore = defineStore('students', () => {
       gender: 'Female',
       parent_id: 'P016',
       parent_name: 'Raymond King',
-      class: 'Grade 8',
+      class: 'SS3',
       section: 'D',
       address: '113 Spruce St',
       dob: '2005-07-02',
       mobile_no: '08123456716',
-      email: 'amelia.king@example.com'
+      email: 'amelia.king@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -251,12 +253,12 @@ export const useStudentStore = defineStore('students', () => {
       gender: 'Male',
       parent_id: 'P017',
       parent_name: 'Patricia Lopez',
-      class: 'Grade 9',
+      class: 'JSS3',
       section: 'A',
       address: '114 Fir St',
       dob: '2004-04-14',
       mobile_no: '08123456717',
-      email: 'daniel.lopez@example.com'
+      email: 'daniel.lopez@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -266,12 +268,12 @@ export const useStudentStore = defineStore('students', () => {
       gender: 'Female',
       parent_id: 'P018',
       parent_name: 'George Scott',
-      class: 'Grade 9',
+      class: 'JSS3',
       section: 'B',
       address: '115 Pine St',
       dob: '2004-09-23',
       mobile_no: '08123456718',
-      email: 'harper.scott@example.com'
+      email: 'harper.scott@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -281,12 +283,12 @@ export const useStudentStore = defineStore('students', () => {
       gender: 'Male',
       parent_id: 'P019',
       parent_name: 'Megan Green',
-      class: 'Grade 10',
+      class: 'SS10',
       section: 'C',
       address: '116 Cedar St',
       dob: '2003-12-11',
       mobile_no: '08123456719',
-      email: 'matthew.green@example.com'
+      email: 'matthew.green@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -296,21 +298,35 @@ export const useStudentStore = defineStore('students', () => {
       gender: 'Female',
       parent_id: 'P020',
       parent_name: 'Edward Adams',
-      class: 'Grade 10',
+      class: 'SS10',
       section: 'D',
       address: '117 Maple St',
       dob: '2003-02-28',
       mobile_no: '08123456720',
-      email: 'ella.adams@example.com'
-    }
+      email: 'ella.adams@example.com',
+    },
   ]);
 
-  const get_student_or_404 = (reg: string ) => {
-    return students.value.find(student => student.reg_no === reg) ?? '404'
-  }
-  
+  const get_student_or_404 = (reg: string) => {
+    return students.value.find((student) => student.reg_no === reg) ?? '404';
+  };
+
+  const search_for_student = (
+    cls: searchParams = null,
+    section: searchParams = null,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    department: searchParams = null,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    sport_house: searchParams = null
+  ) => {
+    return students.value.filter(student => (
+      ( cls == null || student.class == cls) && (section == null || student.section == section)
+     ) )
+  };
+
   return {
     students,
     get_student_or_404,
-  }
+    search_for_student
+  };
 });
