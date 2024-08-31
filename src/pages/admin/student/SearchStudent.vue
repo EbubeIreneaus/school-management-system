@@ -19,16 +19,13 @@ const searchForm = reactive<any>({
 const students = ref<any>([]);
 const isSearching = ref(false);
 
-watch(searchForm, ({ cls, section }: any) => {
+const startSearch = () => {
+  isSearching.value = true;
   setTimeout(() => {
-    isSearching.value = true;
-    setTimeout(() => {
-      students.value = useStudentStore().search_for_student(cls, section);
-      console.log(students.value);
-      isSearching.value = false;
-    }, 2000);
-  }, 4000);
-});
+    students.value = useStudentStore().search_for_student(searchForm);
+    isSearching.value = false;
+  }, 2000);
+};
 
 watch(
   () => isSearching.value,
@@ -101,6 +98,8 @@ watch(
           class="md:tw-w-[150px] tw-w-[100px]"
           debounce="1000"
         />
+
+        <q-btn icon="search" @click="startSearch" />
       </div>
     </div>
 
@@ -111,7 +110,9 @@ watch(
       }"
     >
       <div class="" v-if="students.length > 0">
-        <div class="tw-grid lg:tw-grid-cols-4 md:tw-grid-cols-3 sm:tw-grid-cols-2 tw-gap-5">
+        <div
+          class="tw-grid lg:tw-grid-cols-4 md:tw-grid-cols-3 sm:tw-grid-cols-2 tw-gap-5"
+        >
           <q-card
             class="tw-w-full tw-border tw-rounded-lg tw-shadow"
             v-for="student in students"
@@ -132,15 +133,15 @@ watch(
                   <div class="tw-text-xs tw-text-gray-500">Reg No</div>
                 </div>
                 <div>
-                  <div class="tw-text-sm">male</div>
+                  <div class="tw-text-sm">{{ student.gender }}</div>
                   <div class="tw-text-xs tw-text-gray-500">Gender</div>
                 </div>
                 <div>
-                  <div class="tw-text-sm">JSS1</div>
+                  <div class="tw-text-sm">{{ student.class }}</div>
                   <div class="tw-text-xs tw-text-gray-500">Class</div>
                 </div>
                 <div>
-                  <div class="tw-text-sm">A</div>
+                  <div class="tw-text-sm">{{ student.section }}</div>
                   <div class="tw-text-xs tw-text-gray-500">Section</div>
                 </div>
               </div>

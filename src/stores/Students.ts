@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
 
@@ -311,22 +312,17 @@ export const useStudentStore = defineStore('students', () => {
     return students.value.find((student) => student.reg_no === reg) ?? '404';
   };
 
-  const search_for_student = (
-    cls: searchParams = null,
-    section: searchParams = null,
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    department: searchParams = null,
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    sport_house: searchParams = null
-  ) => {
-    return students.value.filter(student => (
-      ( cls == null || student.class == cls) && (section == null || student.section == section)
-     ) )
+  const search_for_student = (searchForm: any) => {
+    return students.value.filter(
+      (student) =>
+        (searchForm.cls == null || student.class == searchForm.cls) &&
+        (searchForm.section == null || student.section == searchForm.section)
+    );
   };
 
   return {
     students,
     get_student_or_404,
-    search_for_student
+    search_for_student,
   };
 });
