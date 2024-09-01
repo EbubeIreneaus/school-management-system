@@ -225,8 +225,12 @@ export const useParentStore = defineStore('parent', () => {
     }
   ]);
 
-  
+    const get_parent_or_404 = (id: string) => {
+      return parents.value.find(parent => parent.id === id) ?? '404'
+    }
+
     return {
       parents,
+      get_parent_or_404
     }
 });

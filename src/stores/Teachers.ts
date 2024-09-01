@@ -1,8 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
 
 export const useTeacherStore = defineStore('teachers', () => {
-
   const teachers = ref([
     {
       img: '/img/placeholder.png',
@@ -15,7 +15,10 @@ export const useTeacherStore = defineStore('teachers', () => {
       address: '789 Pine St',
       dob: '1985-03-10',
       mobile_no: '08123456703',
-      email: 'alice.johnson@example.com'
+      email: 'alice.johnson@example.com',
+      subjects: ['English'],
+      isFormTeacher: 'false',
+      isAdmin: 'false',
     },
     {
       img: '/img/placeholder.png',
@@ -28,7 +31,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       address: '456 Elm St',
       dob: '1987-05-22',
       mobile_no: '08123456704',
-      email: 'michael.brown@example.com'
+      email: 'michael.brown@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -41,7 +44,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       address: '123 Cedar St',
       dob: '1990-07-15',
       mobile_no: '08123456705',
-      email: 'olivia.martinez@example.com'
+      email: 'olivia.martinez@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -54,7 +57,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       address: '789 Maple St',
       dob: '1989-12-08',
       mobile_no: '08123456706',
-      email: 'daniel.garcia@example.com'
+      email: 'daniel.garcia@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -67,7 +70,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       address: '101 Fir St',
       dob: '1988-10-03',
       mobile_no: '08123456707',
-      email: 'sophia.clark@example.com'
+      email: 'sophia.clark@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -80,7 +83,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       address: '987 Oak St',
       dob: '1986-01-23',
       mobile_no: '08123456708',
-      email: 'james.lopez@example.com'
+      email: 'james.lopez@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -93,7 +96,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       address: '654 Ash St',
       dob: '1992-04-18',
       mobile_no: '08123456709',
-      email: 'mia.hernandez@example.com'
+      email: 'mia.hernandez@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -106,7 +109,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       address: '321 Birch St',
       dob: '1983-11-29',
       mobile_no: '08123456710',
-      email: 'william.king@example.com'
+      email: 'william.king@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -119,7 +122,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       address: '987 Pine St',
       dob: '1991-08-21',
       mobile_no: '08123456711',
-      email: 'isabella.allen@example.com'
+      email: 'isabella.allen@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -132,7 +135,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       address: '123 Elm St',
       dob: '1980-02-05',
       mobile_no: '08123456712',
-      email: 'liam.scott@example.com'
+      email: 'liam.scott@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -145,7 +148,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       address: '321 Cedar St',
       dob: '1984-09-13',
       mobile_no: '08123456713',
-      email: 'ava.walker@example.com'
+      email: 'ava.walker@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -158,7 +161,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       address: '456 Birch St',
       dob: '1987-06-14',
       mobile_no: '08123456714',
-      email: 'lucas.hall@example.com'
+      email: 'lucas.hall@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -171,7 +174,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       address: '789 Spruce St',
       dob: '1993-01-11',
       mobile_no: '08123456715',
-      email: 'charlotte.young@example.com'
+      email: 'charlotte.young@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -184,7 +187,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       address: '321 Fir St',
       dob: '1982-04-25',
       mobile_no: '08123456716',
-      email: 'noah.green@example.com'
+      email: 'noah.green@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -197,7 +200,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       address: '456 Maple St',
       dob: '1994-11-07',
       mobile_no: '08123456717',
-      email: 'amelia.adams@example.com'
+      email: 'amelia.adams@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -210,7 +213,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       address: '789 Ash St',
       dob: '1981-12-15',
       mobile_no: '08123456718',
-      email: 'elijah.nelson@example.com'
+      email: 'elijah.nelson@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -223,7 +226,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       address: '123 Birch St',
       dob: '1985-05-02',
       mobile_no: '08123456719',
-      email: 'mason.hill@example.com'
+      email: 'mason.hill@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -236,7 +239,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       address: '987 Cedar St',
       dob: '1992-03-21',
       mobile_no: '08123456720',
-      email: 'emily.rodriguez@example.com'
+      email: 'emily.rodriguez@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -249,7 +252,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       address: '456 Pine St',
       dob: '1986-07-18',
       mobile_no: '08123456721',
-      email: 'michael.garcia@example.com'
+      email: 'michael.garcia@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -262,11 +265,30 @@ export const useTeacherStore = defineStore('teachers', () => {
       address: '123 Oak St',
       dob: '1990-09-30',
       mobile_no: '08123456722',
-      email: 'emma.lewis@example.com'
-    }
+      email: 'emma.lewis@example.com',
+    },
   ]);
 
-  return {
-    teachers
+  const search_for_teacher = (searchForm: any) => {
+    console.log(searchForm)
+    return teachers.value.filter(
+      (teacher) =>(
+        searchForm.subject == null ||
+        (teacher.subjects?.includes(searchForm.subject) &&
+          searchForm.isFormTeacher == null) ||
+        (teacher.isFormTeacher == searchForm.isFormTeacher &&
+          searchForm.isAdmin == null) ||
+        teacher.isAdmin == searchForm.isAdmin
+      )
+    );
+  };
+
+  const get_teacher_or_404 = (id: string) => {
+    return teachers.value.find(teacher => teacher.id = id) ?? '404'
   }
+  return {
+    teachers,
+    search_for_teacher,
+    get_teacher_or_404
+  };
 });

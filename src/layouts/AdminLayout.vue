@@ -258,20 +258,6 @@
             <q-expansion-item label="Parents" icon="supervisor_account" group="navgroup">
               <q-list class="tw-px-1">
                 <q-item
-                  to="/admin/parent/new"
-                  v-ripple
-                  clickable
-                  active-class="none"
-                  exact-active-class="text-accent"
-                >
-                  <q-item-section avatar
-                    ><q-icon name="group_add" color="grey"
-                  /></q-item-section>
-                  <q-item-section
-                    ><q-item-label>New Parent</q-item-label></q-item-section
-                  >
-                </q-item>
-                <q-item
                   to="/admin/parent/all"
                   v-ripple
                   clickable
@@ -282,21 +268,7 @@
                     ><q-icon name="diversity_3" color="grey"
                   /></q-item-section>
                   <q-item-section
-                    ><q-item-label>All Teachers</q-item-label></q-item-section
-                  >
-                </q-item>
-                <q-item
-                  to="/admin/parent/search"
-                  v-ripple
-                  clickable
-                  active-class="none"
-                  exact-active-class="text-accent"
-                >
-                  <q-item-section avatar
-                    ><q-icon name="engineering" color="grey"
-                  /></q-item-section>
-                  <q-item-section
-                    ><q-item-label>Search </q-item-label></q-item-section
+                    ><q-item-label>All Parents</q-item-label></q-item-section
                   >
                 </q-item>
               </q-list>
@@ -315,7 +287,7 @@
                     ><q-icon name="fa-solid fa-user-plus" color="grey"
                   /></q-item-section>
                   <q-item-section
-                    ><q-item-label>New Teacher</q-item-label></q-item-section
+                    ><q-item-label>New Staff</q-item-label></q-item-section
                   >
                 </q-item>
                 <q-item

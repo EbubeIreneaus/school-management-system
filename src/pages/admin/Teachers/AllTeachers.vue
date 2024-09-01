@@ -1,17 +1,17 @@
 <script lang="ts" setup>
 import { QTableColumn } from 'quasar';
 import BreadCrumbs from 'src/components/BreadCrumbs.vue';
-import { useStudentStore } from 'src/stores/Students';
+import { useTeacherStore } from 'src/stores/Teachers';
 import { useRouter } from 'vue-router';
 
-let $router = useRouter()
+const $router = useRouter()
 
 const TeachersColumns: QTableColumn[] = [
   {
     name: 'id',
     required: true,
     label: 'Id',
-    field: 'reg_no',
+    field: 'id',
     sortable: true,
     align: 'left',
   },
@@ -80,7 +80,8 @@ const TeachersColumns: QTableColumn[] = [
   },
 ];
 
-const teacher: object[] = useStudentStore().students;
+const teacher: object[] = useTeacherStore().teachers;
+
 </script>
 
 <template>
@@ -88,19 +89,19 @@ const teacher: object[] = useStudentStore().students;
     <BreadCrumbs :navs="['Administration', 'All Student']" />
     <div>
       <q-table
-        title="All Students"
-        :columns="TeachersColumns"
-        :rows="teacher"
-        :bordered="false"
-        separator="none"
-        :rows-per-page-options="[25]"
-        flat
-        square
+      title="All Teachers"
+      :columns="TeachersColumns"
+      :rows="teacher"
+      :bordered="false"
+      separator="none"
+      :rows-per-page-options="[25]"
+      flat
+      square
       >
       <template v-slot:body="props">
-        <q-tr :props="props" @click="$router.push(`/admin/student/${props.row.reg_no}`)">
+          <q-tr :props="props" @click="$router.push(`/admin/teacher/${props.row.id}`)">
             <q-td>
-              {{ props.row.reg_no }}
+              {{ props.row.id }}
             </q-td>
             <q-td>
               {{ props.row.firstname }}
@@ -112,13 +113,13 @@ const teacher: object[] = useStudentStore().students;
               {{ props.row.gender}}
             </q-td>
             <q-td>
+              {{ props.row.gender}}
+            </q-td>
+            <q-td>
               {{ props.row.class }}
             </q-td>
             <q-td>
               {{ props.row.section}}
-            </q-td>
-            <q-td>
-              {{ props.row.address}}
             </q-td>
             <q-td>
               {{ props.row.dob }}
@@ -127,13 +128,15 @@ const teacher: object[] = useStudentStore().students;
               {{ props.row.mobile_no}}
             </q-td>
             <q-td>
-              {{ props.row.email}}
+              {{ props.row.email }}
             </q-td>
           </q-tr>
-      </template>
-      </q-table>
+        </template>
+    </q-table>
     </div>
   </q-page>
 </template>
 
-<style lang="postcss" scoped></style>
+<style lang="postcss" scoped>
+
+</style>

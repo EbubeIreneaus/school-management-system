@@ -71,7 +71,22 @@ const routes: RouteRecordRaw[] = [
         {path: 'new', component: ()=> import('pages/admin/student/NewStudent.vue')},
         {path: 'all', component: ()=> import('pages/admin/student/AllStudent.vue')},
         {path: 'search', component: () => import('pages/admin/student/SearchStudent.vue')}
-      ]}
+      ]},
+      {path: 'student/:reg_no', component: ()=> import('pages/admin/student/StudentProfile.vue')},
+      {path: 'teacher', children: [
+        {path: 'new', component: ()=> import('pages/admin/Teachers/NewTeacher.vue')},
+        {path: 'all', component: ()=> import('pages/admin/Teachers/AllTeachers.vue')},
+        {path: 'search', component: () => import('pages/admin/Teachers/SearchTeacher.vue')}
+      ]},
+      {path: 'teacher/:id', component: ()=> import('pages/admin/Teachers/TeacherProfile.vue')},
+      {path: 'parent', children: [
+        {path: 'new', component: ()=> import('pages/admin/parent/New.vue')},
+        {path: 'all', component: ()=> import('pages/admin/Parent/AllParents.vue')},
+
+      ]},
+      {path: 'parent/:id', component:()=> import('pages/admin/Parent/ParentProfile.vue')}
+
+
     ]
   },
   {

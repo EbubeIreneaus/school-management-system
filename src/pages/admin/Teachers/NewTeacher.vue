@@ -10,16 +10,16 @@ const parent: any = reactive({
   role: 'parent',
 });
 
-const parentResponsibility = [
-  {
-    label: 'I am just a Guidance',
-    value: 'Guidance',
-  },
-  {
-    label: 'I am his/her actual parent',
-    value: 'parent',
-  },
-];
+// const GuarantorRole = [
+//   {
+//     label: 'I am just ',
+//     value: 'Guidance',
+//   },
+//   {
+//     label: 'I am his/her actual parent',
+//     value: 'parent',
+//   },
+// ];
 </script>
 
 <template>
@@ -30,12 +30,12 @@ const parentResponsibility = [
       <q-card flat square>
         <q-card-section>
           <q-toolbal>
-            <q-toolnar-title>New Student Form</q-toolnar-title>
+            <q-toolnar-title>New Teacher Form</q-toolnar-title>
           </q-toolbal>
         </q-card-section>
         <q-card-section>
           <div>
-            <div>Student Information</div>
+            <div>Teacher Information</div>
             <div class="tw-w-14 tw-h-1.5 tw-bg-gray-500 tw-mt-2"></div>
           </div>
 
@@ -86,21 +86,13 @@ const parentResponsibility = [
             />
 
             <q-select
-              label="Class"
+              label="Assigned Subject"
               v-model="student.class"
-              :options="['JSS1', 'JSS2', 'JSS3', 'SS1', 'SS2', 'SS3']"
+              :options="['English', 'Mathematics', 'Physics', 'Chemistry', 'Biology', 'Health Education']"
               filled
               :label-color="$q.dark.isActive ? 'accent' : 'black'"
               dense
-            />
-
-            <q-select
-              label="Section"
-              v-model="student.section"
-              :options="['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']"
-              filled
-              :label-color="$q.dark.isActive ? 'accent' : 'black'"
-              dense
+              multiple
             />
 
             <q-select
@@ -110,15 +102,6 @@ const parentResponsibility = [
               filled
               :label-color="$q.dark.isActive ? 'accent' : 'black'"
               dense
-            />
-            <q-select
-              label="Sport House"
-              v-model="student.sport_house"
-              :options="['red', 'blue', 'white', 'yellow', 'green']"
-              filled
-              :label-color="$q.dark.isActive ? 'accent' : 'black'"
-              dense
-              debounce="1000"
             />
 
             <q-select
@@ -130,8 +113,25 @@ const parentResponsibility = [
               dense
               debounce="1000"
             />
+            <q-select
+              label="Nationality"
+              v-model="student.nationality"
+              :options="[
+                'Nigeria',
+                'Ghana',
+                'Ivory Coast',
+                'Egypt',
+                'South Africa',
+                'Togo',
+                'Cameron',
+                'Other',
+              ]"
+              filled
+              :label-color="$q.dark.isActive ? 'accent' : 'black'"
+              dense
+            />
             <q-input
-              label="Admission No"
+              label="Teacher Staff No"
               v-model="student.admission_number"
               filled
               :label-color="$q.dark.isActive ? 'accent' : 'black'"
@@ -139,15 +139,14 @@ const parentResponsibility = [
             />
 
             <q-input
-              label="Seat No"
-              v-model="student.seat_number"
+              label="Address"
+              v-model="parent.address"
               filled
-              type="number"
-              min="1"
-              max="150"
+              class="sm:tw-col-span-2"
               :label-color="$q.dark.isActive ? 'accent' : 'black'"
               dense
             />
+
             <q-file
               v-model="student.file"
               label="profile pics"
@@ -159,7 +158,7 @@ const parentResponsibility = [
               :label-color="$q.dark.isActive ? 'accent' : 'black'"
             />
 
-            <div class="lg:tw-col-span-4 md:tw-col-span-3 sm:tw-col-span-2">
+            <!-- <div class="lg:tw-col-span-4 md:tw-col-span-3 sm:tw-col-span-2">
               <q-checkbox
                 v-model="student.is_disable"
                 label="Student is disable"
@@ -168,13 +167,13 @@ const parentResponsibility = [
                 :color="$q.dark.isActive ? 'accent' : 'black'"
                 :label-color="$q.dark.isActive ? 'accent' : 'black'"
               />
-            </div>
+            </div> -->
           </div>
         </q-card-section>
 
         <q-card-section>
           <div>
-            <div>Parent Information</div>
+            <div>Guarantor Information</div>
             <div class="tw-w-14 tw-h-1.5 tw-bg-gray-500 tw-mt-2"></div>
           </div>
 
@@ -298,7 +297,7 @@ const parentResponsibility = [
               :label-color="$q.dark.isActive ? 'accent' : 'black'"
             />
 
-            <div class="lg:tw-col-span-4 md:tw-col-span-3 sm:tw-col-span-2">
+            <!-- <div class="lg:tw-col-span-4 md:tw-col-span-3 sm:tw-col-span-2">
               <q-option-group
                 v-model="parent.role"
                 :options="parentResponsibility"
@@ -306,7 +305,7 @@ const parentResponsibility = [
                 :color="$q.dark.isActive ? 'accent' : 'black'"
                 size="sm"
               />
-            </div>
+            </div> -->
           </div>
         </q-card-section>
 
