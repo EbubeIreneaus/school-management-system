@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
 
-export const useStaffStore = defineStore('staff', ()=>{
+export const useStaffStore = defineStore('staff', () => {
   const otherStaff = ref([
     {
       img: '/img/placeholder.png',
@@ -13,7 +14,7 @@ export const useStaffStore = defineStore('staff', ()=>{
       position: 'Principal',
       address: '123 Main St',
       phone: '08012345601',
-      email: 'anna.white@example.com'
+      email: 'anna.white@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -25,7 +26,7 @@ export const useStaffStore = defineStore('staff', ()=>{
       position: 'Vice Principal',
       address: '456 Elm St',
       phone: '08012345602',
-      email: 'ben.johnson@example.com'
+      email: 'ben.johnson@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -37,7 +38,7 @@ export const useStaffStore = defineStore('staff', ()=>{
       position: 'Bursar',
       address: '789 Oak St',
       phone: '08012345603',
-      email: 'carla.smith@example.com'
+      email: 'carla.smith@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -49,7 +50,7 @@ export const useStaffStore = defineStore('staff', ()=>{
       position: 'Cleaner',
       address: '101 Pine St',
       phone: '08012345604',
-      email: 'daniel.brown@example.com'
+      email: 'daniel.brown@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -61,7 +62,7 @@ export const useStaffStore = defineStore('staff', ()=>{
       position: 'Security',
       address: '102 Maple St',
       phone: '08012345605',
-      email: 'ella.jones@example.com'
+      email: 'ella.jones@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -73,7 +74,7 @@ export const useStaffStore = defineStore('staff', ()=>{
       position: 'Bursar',
       address: '103 Cedar St',
       phone: '08012345606',
-      email: 'frank.wilson@example.com'
+      email: 'frank.wilson@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -85,7 +86,7 @@ export const useStaffStore = defineStore('staff', ()=>{
       position: 'Cleaner',
       address: '104 Birch St',
       phone: '08012345607',
-      email: 'grace.davis@example.com'
+      email: 'grace.davis@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -97,7 +98,7 @@ export const useStaffStore = defineStore('staff', ()=>{
       position: 'Security',
       address: '105 Elm St',
       phone: '08012345608',
-      email: 'harry.miller@example.com'
+      email: 'harry.miller@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -109,7 +110,7 @@ export const useStaffStore = defineStore('staff', ()=>{
       position: 'Bursar',
       address: '106 Oak St',
       phone: '08012345609',
-      email: 'irene.garcia@example.com'
+      email: 'irene.garcia@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -121,7 +122,7 @@ export const useStaffStore = defineStore('staff', ()=>{
       position: 'Cleaner',
       address: '107 Pine St',
       phone: '08012345610',
-      email: 'jack.martinez@example.com'
+      email: 'jack.martinez@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -133,7 +134,7 @@ export const useStaffStore = defineStore('staff', ()=>{
       position: 'Security',
       address: '108 Maple St',
       phone: '08012345611',
-      email: 'karen.taylor@example.com'
+      email: 'karen.taylor@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -145,7 +146,7 @@ export const useStaffStore = defineStore('staff', ()=>{
       position: 'Bursar',
       address: '109 Cedar St',
       phone: '08012345612',
-      email: 'leo.anderson@example.com'
+      email: 'leo.anderson@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -157,7 +158,7 @@ export const useStaffStore = defineStore('staff', ()=>{
       position: 'Cleaner',
       address: '110 Birch St',
       phone: '08012345613',
-      email: 'mia.thomas@example.com'
+      email: 'mia.thomas@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -169,7 +170,7 @@ export const useStaffStore = defineStore('staff', ()=>{
       position: 'Security',
       address: '111 Elm St',
       phone: '08012345614',
-      email: 'nathan.jackson@example.com'
+      email: 'nathan.jackson@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -181,7 +182,7 @@ export const useStaffStore = defineStore('staff', ()=>{
       position: 'Bursar',
       address: '112 Oak St',
       phone: '08012345615',
-      email: 'olivia.white@example.com'
+      email: 'olivia.white@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -193,7 +194,7 @@ export const useStaffStore = defineStore('staff', ()=>{
       position: 'Cleaner',
       address: '113 Pine St',
       phone: '08012345616',
-      email: 'paul.harris@example.com'
+      email: 'paul.harris@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -205,7 +206,7 @@ export const useStaffStore = defineStore('staff', ()=>{
       position: 'Security',
       address: '114 Maple St',
       phone: '08012345617',
-      email: 'quinn.lewis@example.com'
+      email: 'quinn.lewis@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -217,7 +218,7 @@ export const useStaffStore = defineStore('staff', ()=>{
       position: 'Bursar',
       address: '115 Cedar St',
       phone: '08012345618',
-      email: 'ryan.walker@example.com'
+      email: 'ryan.walker@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -229,7 +230,7 @@ export const useStaffStore = defineStore('staff', ()=>{
       position: 'Cleaner',
       address: '116 Birch St',
       phone: '08012345619',
-      email: 'sophia.young@example.com'
+      email: 'sophia.young@example.com',
     },
     {
       img: '/img/placeholder.png',
@@ -241,15 +242,22 @@ export const useStaffStore = defineStore('staff', ()=>{
       position: 'Security',
       address: '117 Elm St',
       phone: '08012345620',
-      email: 'tom.king@example.com'
-    }
+      email: 'tom.king@example.com',
+    },
   ]);
 
-  const get_staff_or_404 = (id : string) => {
-    return otherStaff.value.find(staff => staff.id === id)
-  }
+  const get_staff_or_404 = (id: string) => {
+    return otherStaff.value.find((staff) => staff.id === id);
+  };
+
+  const search_for_staff = (searchData: any) => {
+    return otherStaff.value.filter(
+      (staff) => searchData == null || staff.position === searchData.position
+    );
+  };
   return {
     otherStaff,
-    get_staff_or_404
-  }
+    get_staff_or_404,
+    search_for_staff,
+  };
 });

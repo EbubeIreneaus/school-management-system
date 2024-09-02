@@ -88,7 +88,9 @@ const routes: RouteRecordRaw[] = [
 
       {path: 'staff', children: [
         {path: 'all', component: ()=> import('pages/admin/OtherStaffs/AllStaff.vue')},
-        {path: ':id', component: ()=> import('pages/admin/OtherStaffs/StaffProfile.vue')}
+        {path: ':id', component: ()=> import('pages/admin/OtherStaffs/StaffProfile.vue')},
+        {path: 'new', component: ()=> import('pages/admin/OtherStaffs/NewStaff.vue')},
+        {path: 'search', component: ()=>import('pages/admin/OtherStaffs/SearchStaff.vue')}
 
       ]},
     ]
