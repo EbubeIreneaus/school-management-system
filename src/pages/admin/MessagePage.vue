@@ -11,7 +11,7 @@ const form = reactive({
 
 <template>
   <q-page class="sm:tw-p-4 tw-p-2">
-    <BreadCrumbs :navs="['Parent', 'Messages']" />
+    <BreadCrumbs :navs="['Administration', 'Messages']" />
 
     <div class="tw-grid tw-grid-cols-12 tw-gap-x-5 tw-gap-y-8">
 
@@ -49,7 +49,7 @@ const form = reactive({
           <q-editor v-model="form.message" placeholder="write message here" />
         </q-card-section>
         <q-card-section>
-          <q-btn icon="send" label="send message" class="tw-px-10 tw-py-2.5" />
+          <q-btn icon="send" label="send" class="tw-px-10 tw-py-2.5" color="green-10" unelevated />
         </q-card-section>
       </q-card>
 
