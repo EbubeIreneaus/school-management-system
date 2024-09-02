@@ -7,6 +7,7 @@ import { useRouter } from 'vue-router';
 let $router = useRouter()
 
 const TeachersColumns: QTableColumn[] = [
+  {name: 'image', field: 'img', label: 'Image', align: 'left'},
   {
     name: 'id',
     required: true,
@@ -99,6 +100,9 @@ const teacher: object[] = useStudentStore().students;
       >
       <template v-slot:body="props">
         <q-tr :props="props" @click="$router.push(`/admin/student/${props.row.reg_no}`)">
+          <q-td class="tw-p-1">
+              <q-img :src="props.row.img" class="tw-w-10 tw-h-10" />
+            </q-td>
             <q-td>
               {{ props.row.reg_no }}
             </q-td>

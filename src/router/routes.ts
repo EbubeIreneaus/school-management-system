@@ -84,9 +84,13 @@ const routes: RouteRecordRaw[] = [
         {path: 'edit', component: ()=> import('pages/admin/Parent/EditPage.vue')}
 
       ]},
-      {path: 'parent/:id', component:()=> import('pages/admin/Parent/ParentProfile.vue')}
+      {path: 'parent/:id', component:()=> import('pages/admin/Parent/ParentProfile.vue')},
 
+      {path: 'staff', children: [
+        {path: 'all', component: ()=> import('pages/admin/OtherStaffs/AllStaff.vue')},
+        {path: ':id', component: ()=> import('pages/admin/OtherStaffs/StaffProfile.vue')}
 
+      ]},
     ]
   },
   {

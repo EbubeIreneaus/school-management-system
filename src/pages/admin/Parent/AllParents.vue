@@ -6,6 +6,7 @@ import { useRouter } from 'vue-router';
 
 const $router = useRouter()
 const ParentsColumns: QTableColumn[] = [
+  {name: 'image', field: 'img', label: 'Image', align: 'left'},
   {
     name: 'id',
     required: true,
@@ -84,6 +85,9 @@ const parent: object[] = useParentStore().parents;
       >
         <template v-slot:body="props">
           <q-tr :props="props" @click="$router.push(`/admin/parent/${props.row.id}`)">
+            <q-td class="tw-p-1">
+              <q-img :src="props.row.img" class="tw-w-10 tw-h-10" />
+            </q-td>
             <q-td>
               {{ props.row.id }}
             </q-td>
