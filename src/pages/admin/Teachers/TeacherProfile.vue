@@ -59,7 +59,7 @@ let teacher: any = useTeacherStore().get_teacher_or_404(id.toString())
             <div>
               <div class="text-body1">{{ teacher.mobile_no }}</div>
               <div class="text-body2 tw-text-gray-500">Phone Number</div>
-            </div>
+            </div> 
 
           </div>
         </q-card-section>
