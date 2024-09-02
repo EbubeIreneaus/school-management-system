@@ -89,13 +89,51 @@ const notices: any = useNoticeStore().notices;
               <q-toolbar-title>Recent Activities</q-toolbar-title>
             </q-toolbar>
 
-            <q-card-section v-for="notice in notices" :key="notice.id">
-              <notice-component
-                :date="notice.date"
-                :name="notice.name"
-                :timePosted="notice.timePosted"
-                :content="notice.content"
-              />
+            <q-card-section>
+              <q-timeline >
+
+                <q-timeline-entry
+                  title="Post New Notice"
+                  subtitle="February 22, 1986"
+                >
+                </q-timeline-entry>
+
+                <q-timeline-entry
+                  title="Record New Student"
+                  subtitle="February 21, 2024"
+                >
+                </q-timeline-entry>
+                <q-timeline-entry
+                  title="Added Mr Emeka from Security Dept as Admin"
+                  subtitle="February 22, 1986"
+                >
+                </q-timeline-entry>
+
+                <q-timeline-entry
+                  title="Event Title"
+                  subtitle="February 22, 1986"
+                >
+                </q-timeline-entry>
+
+                <q-timeline-entry
+                  title="Event Title"
+                  subtitle="February 22, 1986"
+                >
+                </q-timeline-entry>
+
+                <q-timeline-entry
+                  title="Event Title"
+                  subtitle="February 22, 1986"
+                >
+                </q-timeline-entry>
+
+                <q-timeline-entry
+                  title="Event Title"
+                  subtitle="February 22, 1986"
+                >
+
+                </q-timeline-entry>
+              </q-timeline>
             </q-card-section>
           </q-card>
         </q-scroll-area>
