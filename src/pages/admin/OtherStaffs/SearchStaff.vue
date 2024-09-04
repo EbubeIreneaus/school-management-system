@@ -93,7 +93,7 @@ watch(
             <q-card-section class="tw-flex tw-flex-col tw-pb-10">
               <q-img
                 class="tw-w-20 tw-h-20 tw-mb-3 tw-rounded-full tw-shadow-lg"
-                src="/img/placeholder.png"
+                src="https://cdn.quasar.dev/img/avatar4.jpg"
                 alt="Bonnie image"
               />
               <h6 class="tw-mb-1 tw-text-xl tw-font-medium text-accent">

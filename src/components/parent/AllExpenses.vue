@@ -51,6 +51,14 @@ const Expenses = [
     email: 'aa.bb@gmail.com',
     date: '10/10/2023',
   },
+  {
+    id: '#003',
+    type: 'School Fees',
+    amount: 'N93,000',
+    email: 'aa.bb@gmail.com',
+    date: '10/10/2023',
+  },
+ 
 ];
 </script>
 

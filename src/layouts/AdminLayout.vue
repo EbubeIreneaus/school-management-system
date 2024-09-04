@@ -1,11 +1,11 @@
 <template>
-  <q-layout view="lHh LpR lff" :class="{ 'bg-primary': !$q.dark.isActive }">
+  <q-layout view="hHh LpR lff" :class="{ 'bg-primary': !$q.dark.isActive }">
     <q-header
-      elevated
       class="q-py-xs"
       :class="{ 'bg-dark': $q.dark.isActive }"
       height-hint="58"
     >
+      <WindowAppBar />
       <q-toolbar>
         <q-btn
           flat
@@ -113,6 +113,25 @@
             <q-avatar size="26px">
               <img src="https://cdn.quasar.dev/img/boy-avatar.png" />
             </q-avatar>
+
+            <q-menu>
+              <div class="q-pa-md">
+                <div class="column items-center">
+                  <q-avatar size="72px">
+                    <q-img src="https://cdn.quasar.dev/img/avatar4.jpg" />
+                  </q-avatar>
+
+                  <div class="text-subtitle1 q-mt-md q-mb-xs tw-line-clamp-1">
+                    Okigwe Ebube Ireneaus
+                  </div>
+
+                  <RouterLink to="/auth">
+                    <q-btn label="Logout" push size="sm" v-close-popup />
+                  </RouterLink>
+                </div>
+              </div>
+            </q-menu>
+
             <q-tooltip>Account</q-tooltip>
           </q-btn>
         </div>
@@ -161,165 +180,177 @@
           </q-item>
 
           <q-separator class="q-my-md" />
-            <q-expansion-item label="Students" icon="school" group="navgroup">
-              <q-list class="tw-px-1">
-                <q-item
-                  to="/admin/student/new"
-                  v-ripple
-                  clickable
-                  active-class="none"
-                  exact-active-class="text-accent"
+          <q-expansion-item label="Students" icon="school" group="navgroup">
+            <q-list class="tw-px-1">
+              <q-item
+                to="/admin/student/new"
+                v-ripple
+                clickable
+                active-class="none"
+                exact-active-class="text-accent"
+              >
+                <q-item-section avatar
+                  ><q-icon name="person_add" color="grey"
+                /></q-item-section>
+                <q-item-section
+                  ><q-item-label>New Student</q-item-label></q-item-section
                 >
-                  <q-item-section avatar
-                    ><q-icon name="person_add" color="grey"
-                  /></q-item-section>
-                  <q-item-section
-                    ><q-item-label>New Student</q-item-label></q-item-section
-                  >
-                </q-item>
-                <q-item
-                  to="/admin/student/all"
-                  v-ripple
-                  clickable
-                  active-class="none"
-                  exact-active-class="text-accent"
+              </q-item>
+              <q-item
+                to="/admin/student/all"
+                v-ripple
+                clickable
+                active-class="none"
+                exact-active-class="text-accent"
+              >
+                <q-item-section avatar
+                  ><q-icon name="groups" color="grey"
+                /></q-item-section>
+                <q-item-section
+                  ><q-item-label>All Student</q-item-label></q-item-section
                 >
-                  <q-item-section avatar
-                    ><q-icon name="groups" color="grey"
-                  /></q-item-section>
-                  <q-item-section
-                    ><q-item-label>All Student</q-item-label></q-item-section
-                  >
-                </q-item>
-                <q-item
-                  to="/admin/student/search"
-                  v-ripple
-                  clickable
-                  active-class="none"
-                  exact-active-class="text-accent"
+              </q-item>
+              <q-item
+                to="/admin/student/search"
+                v-ripple
+                clickable
+                active-class="none"
+                exact-active-class="text-accent"
+              >
+                <q-item-section avatar
+                  ><q-icon name="engineering" color="grey"
+                /></q-item-section>
+                <q-item-section
+                  ><q-item-label>Search </q-item-label></q-item-section
                 >
-                  <q-item-section avatar
-                    ><q-icon name="engineering" color="grey"
-                  /></q-item-section>
-                  <q-item-section
-                    ><q-item-label>Search </q-item-label></q-item-section
-                  >
-                </q-item>
-              </q-list>
-            </q-expansion-item>
+              </q-item>
+            </q-list>
+          </q-expansion-item>
 
-            <q-expansion-item label="Teachers" icon="fa-solid fa-person-chalkboard" group="navgroup" >
-              <q-list class="tw-px-1">
-                <q-item
-                  to="/admin/teacher/new"
-                  v-ripple
-                  clickable
-                  active-class="none"
-                  exact-active-class="text-accent"
+          <q-expansion-item
+            label="Teachers"
+            icon="fa-solid fa-person-chalkboard"
+            group="navgroup"
+          >
+            <q-list class="tw-px-1">
+              <q-item
+                to="/admin/teacher/new"
+                v-ripple
+                clickable
+                active-class="none"
+                exact-active-class="text-accent"
+              >
+                <q-item-section avatar
+                  ><q-icon name="person_add" color="grey"
+                /></q-item-section>
+                <q-item-section
+                  ><q-item-label>New Teacher</q-item-label></q-item-section
                 >
-                  <q-item-section avatar
-                    ><q-icon name="person_add" color="grey"
-                  /></q-item-section>
-                  <q-item-section
-                    ><q-item-label>New Teacher</q-item-label></q-item-section
-                  >
-                </q-item>
-                <q-item
-                  to="/admin/teacher/all"
-                  v-ripple
-                  clickable
-                  active-class="none"
-                  exact-active-class="text-accent"
+              </q-item>
+              <q-item
+                to="/admin/teacher/all"
+                v-ripple
+                clickable
+                active-class="none"
+                exact-active-class="text-accent"
+              >
+                <q-item-section avatar
+                  ><q-icon name="groups" color="grey"
+                /></q-item-section>
+                <q-item-section
+                  ><q-item-label>All Teachers</q-item-label></q-item-section
                 >
-                  <q-item-section avatar
-                    ><q-icon name="groups" color="grey"
-                  /></q-item-section>
-                  <q-item-section
-                    ><q-item-label>All Teachers</q-item-label></q-item-section
-                  >
-                </q-item>
-                <q-item
-                  to="/admin/teacher/search"
-                  v-ripple
-                  clickable
-                  active-class="none"
-                  exact-active-class="text-accent"
+              </q-item>
+              <q-item
+                to="/admin/teacher/search"
+                v-ripple
+                clickable
+                active-class="none"
+                exact-active-class="text-accent"
+              >
+                <q-item-section avatar
+                  ><q-icon name="engineering" color="grey"
+                /></q-item-section>
+                <q-item-section
+                  ><q-item-label>Search </q-item-label></q-item-section
                 >
-                  <q-item-section avatar
-                    ><q-icon name="engineering" color="grey"
-                  /></q-item-section>
-                  <q-item-section
-                    ><q-item-label>Search </q-item-label></q-item-section
-                  >
-                </q-item>
-              </q-list>
-            </q-expansion-item>
+              </q-item>
+            </q-list>
+          </q-expansion-item>
 
-            <q-expansion-item label="Parents" icon="supervisor_account" group="navgroup">
-              <q-list class="tw-px-1">
-                <q-item
-                  to="/admin/parent/all"
-                  v-ripple
-                  clickable
-                  active-class="none"
-                  exact-active-class="text-accent"
+          <q-expansion-item
+            label="Parents"
+            icon="supervisor_account"
+            group="navgroup"
+          >
+            <q-list class="tw-px-1">
+              <q-item
+                to="/admin/parent/all"
+                v-ripple
+                clickable
+                active-class="none"
+                exact-active-class="text-accent"
+              >
+                <q-item-section avatar
+                  ><q-icon name="diversity_3" color="grey"
+                /></q-item-section>
+                <q-item-section
+                  ><q-item-label>All Parents</q-item-label></q-item-section
                 >
-                  <q-item-section avatar
-                    ><q-icon name="diversity_3" color="grey"
-                  /></q-item-section>
-                  <q-item-section
-                    ><q-item-label>All Parents</q-item-label></q-item-section
-                  >
-                </q-item>
-              </q-list>
-            </q-expansion-item>
+              </q-item>
+            </q-list>
+          </q-expansion-item>
 
-            <q-expansion-item label="Staffs" icon="fa-solid fa-user-shield" group="navgroup">
-              <q-list class="tw-px-1">
-                <q-item
-                  to="/admin/staff/new"
-                  v-ripple
-                  clickable
-                  active-class="none"
-                  exact-active-class="text-accent"
+          <q-expansion-item
+            label="Staffs"
+            icon="fa-solid fa-user-shield"
+            group="navgroup"
+          >
+            <q-list class="tw-px-1">
+              <q-item
+                to="/admin/staff/new"
+                v-ripple
+                clickable
+                active-class="none"
+                exact-active-class="text-accent"
+              >
+                <q-item-section avatar
+                  ><q-icon name="fa-solid fa-user-plus" color="grey"
+                /></q-item-section>
+                <q-item-section
+                  ><q-item-label>New Staff</q-item-label></q-item-section
                 >
-                  <q-item-section avatar
-                    ><q-icon name="fa-solid fa-user-plus" color="grey"
-                  /></q-item-section>
-                  <q-item-section
-                    ><q-item-label>New Staff</q-item-label></q-item-section
-                  >
-                </q-item>
-                <q-item
-                  to="/admin/staff/all"
-                  v-ripple
-                  clickable
-                  active-class="none"
-                  exact-active-class="text-accent"
+              </q-item>
+              <q-item
+                to="/admin/staff/all"
+                v-ripple
+                clickable
+                active-class="none"
+                exact-active-class="text-accent"
+              >
+                <q-item-section avatar
+                  ><q-icon name="fa-solid fa-users" color="grey"
+                /></q-item-section>
+                <q-item-section
+                  ><q-item-label>All Staffs</q-item-label></q-item-section
                 >
-                  <q-item-section avatar
-                    ><q-icon name="fa-solid fa-users" color="grey"
-                  /></q-item-section>
-                  <q-item-section
-                    ><q-item-label>All Staffs</q-item-label></q-item-section
-                  >
-                </q-item>
-                <q-item
-                  to="/admin/staff/search"
-                  v-ripple
-                  clickable
-                  active-class="none"
-                  exact-active-class="text-accent"
+              </q-item>
+              <q-item
+                to="/admin/staff/search"
+                v-ripple
+                clickable
+                active-class="none"
+                exact-active-class="text-accent"
+              >
+                <q-item-section avatar
+                  ><q-icon name="fa-solid fa-user-gear" color="grey"
+                /></q-item-section>
+                <q-item-section
+                  ><q-item-label>Search </q-item-label></q-item-section
                 >
-                  <q-item-section avatar
-                    ><q-icon name="fa-solid fa-user-gear" color="grey"
-                  /></q-item-section>
-                  <q-item-section
-                    ><q-item-label>Search </q-item-label></q-item-section
-                  >
-                </q-item>
-              </q-list>
-            </q-expansion-item>
+              </q-item>
+            </q-list>
+          </q-expansion-item>
 
           <q-separator class="q-mt-md q-mb-xs" />
 
@@ -333,7 +364,9 @@
             <q-item-section avatar
               ><q-icon name="notifications" color="grey"
             /></q-item-section>
-            <q-item-section><q-item-label>Notice & Notiication</q-item-label></q-item-section>
+            <q-item-section
+              ><q-item-label>Notice & Notiication</q-item-label></q-item-section
+            >
           </q-item>
 
           <q-item
@@ -346,7 +379,9 @@
             <q-item-section avatar
               ><q-icon name="message" color="grey"
             /></q-item-section>
-            <q-item-section><q-item-label>Messages</q-item-label></q-item-section>
+            <q-item-section
+              ><q-item-label>Messages</q-item-label></q-item-section
+            >
           </q-item>
 
           <q-item
@@ -395,6 +430,8 @@ import { ref } from 'vue';
 import { Languages } from 'src/composables/Languages';
 import FooterComponent from 'src/components/FooterComponent.vue';
 import ProfileCard from 'src/components/ProfileCard.vue';
+import WindowAppBar from 'src/components/WindowAppBar.vue';
+import { RouterLink } from 'vue-router';
 // import { LanguagesTypes } from 'src/types/LanguageTypes';
 
 defineOptions({

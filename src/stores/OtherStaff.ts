@@ -5,7 +5,7 @@ import { ref } from 'vue';
 export const useStaffStore = defineStore('staff', () => {
   const otherStaff = ref([
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'S001',
       firstname: 'Anna',
       lastname: 'White',
@@ -17,7 +17,7 @@ export const useStaffStore = defineStore('staff', () => {
       email: 'anna.white@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'S002',
       firstname: 'Ben',
       lastname: 'Johnson',
@@ -29,7 +29,7 @@ export const useStaffStore = defineStore('staff', () => {
       email: 'ben.johnson@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'S003',
       firstname: 'Carla',
       lastname: 'Smith',
@@ -41,7 +41,7 @@ export const useStaffStore = defineStore('staff', () => {
       email: 'carla.smith@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'S004',
       firstname: 'Daniel',
       lastname: 'Brown',
@@ -53,7 +53,7 @@ export const useStaffStore = defineStore('staff', () => {
       email: 'daniel.brown@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'S005',
       firstname: 'Ella',
       lastname: 'Jones',
@@ -65,7 +65,7 @@ export const useStaffStore = defineStore('staff', () => {
       email: 'ella.jones@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'S006',
       firstname: 'Frank',
       lastname: 'Wilson',
@@ -77,7 +77,7 @@ export const useStaffStore = defineStore('staff', () => {
       email: 'frank.wilson@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'S007',
       firstname: 'Grace',
       lastname: 'Davis',
@@ -89,7 +89,7 @@ export const useStaffStore = defineStore('staff', () => {
       email: 'grace.davis@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'S008',
       firstname: 'Harry',
       lastname: 'Miller',
@@ -101,7 +101,7 @@ export const useStaffStore = defineStore('staff', () => {
       email: 'harry.miller@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'S009',
       firstname: 'Irene',
       lastname: 'Garcia',
@@ -113,7 +113,7 @@ export const useStaffStore = defineStore('staff', () => {
       email: 'irene.garcia@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'S010',
       firstname: 'Jack',
       lastname: 'Martinez',
@@ -125,7 +125,7 @@ export const useStaffStore = defineStore('staff', () => {
       email: 'jack.martinez@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'S011',
       firstname: 'Karen',
       lastname: 'Taylor',
@@ -137,7 +137,7 @@ export const useStaffStore = defineStore('staff', () => {
       email: 'karen.taylor@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'S012',
       firstname: 'Leo',
       lastname: 'Anderson',
@@ -149,7 +149,7 @@ export const useStaffStore = defineStore('staff', () => {
       email: 'leo.anderson@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'S013',
       firstname: 'Mia',
       lastname: 'Thomas',
@@ -161,7 +161,7 @@ export const useStaffStore = defineStore('staff', () => {
       email: 'mia.thomas@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'S014',
       firstname: 'Nathan',
       lastname: 'Jackson',
@@ -173,7 +173,7 @@ export const useStaffStore = defineStore('staff', () => {
       email: 'nathan.jackson@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'S015',
       firstname: 'Olivia',
       lastname: 'White',
@@ -185,7 +185,7 @@ export const useStaffStore = defineStore('staff', () => {
       email: 'olivia.white@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'S016',
       firstname: 'Paul',
       lastname: 'Harris',
@@ -197,7 +197,7 @@ export const useStaffStore = defineStore('staff', () => {
       email: 'paul.harris@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'S017',
       firstname: 'Quinn',
       lastname: 'Lewis',
@@ -209,7 +209,7 @@ export const useStaffStore = defineStore('staff', () => {
       email: 'quinn.lewis@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'S018',
       firstname: 'Ryan',
       lastname: 'Walker',
@@ -221,7 +221,7 @@ export const useStaffStore = defineStore('staff', () => {
       email: 'ryan.walker@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'S019',
       firstname: 'Sophia',
       lastname: 'Young',
@@ -233,7 +233,7 @@ export const useStaffStore = defineStore('staff', () => {
       email: 'sophia.young@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'S020',
       firstname: 'Tom',
       lastname: 'King',

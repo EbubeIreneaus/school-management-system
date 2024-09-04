@@ -1,11 +1,11 @@
 <template>
-  <q-layout view="lHh LpR lff" :class="{'bg-primary': !$q.dark.isActive}">
+  <q-layout view="hHh LpR lff" :class="{'bg-primary': !$q.dark.isActive}">
     <q-header
-      elevated
       class="q-py-xs"
       :class="{ 'bg-dark': $q.dark.isActive }"
       height-hint="58"
     >
+      <WindowAppBar />
       <q-toolbar>
         <q-btn
           flat
@@ -113,6 +113,25 @@
             <q-avatar size="26px">
               <img src="https://cdn.quasar.dev/img/boy-avatar.png" />
             </q-avatar>
+
+            <q-menu>
+              <div class="q-pa-md">
+                <div class="column items-center">
+                  <q-avatar size="72px">
+                    <q-img src="https://cdn.quasar.dev/img/avatar4.jpg" />
+                  </q-avatar>
+
+                  <div class="text-subtitle1 q-mt-md q-mb-xs tw-line-clamp-1">
+                    Okigwe Ebube Ireneaus
+                  </div>
+
+                  <RouterLink to="/auth">
+                    <q-btn label="Logout" push size="sm" v-close-popup />
+                  </RouterLink>
+                </div>
+              </div>
+            </q-menu>
+
             <q-tooltip>Account</q-tooltip>
           </q-btn>
         </div>
@@ -218,6 +237,7 @@ import { ref } from 'vue';
 import { Languages } from 'src/composables/Languages';
 import FooterComponent from 'src/components/FooterComponent.vue';
 import ProfileCard from 'src/components/ProfileCard.vue';
+import WindowAppBar from 'src/components/WindowAppBar.vue';
 // import { LanguagesTypes } from 'src/types/LanguageTypes';
 
 defineOptions({

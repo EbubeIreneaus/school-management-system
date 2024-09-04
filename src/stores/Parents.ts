@@ -4,7 +4,7 @@ import { ref } from 'vue';
 export const useParentStore = defineStore('parent', () => {
   const parents = ref([
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'P001',
       firstname: 'John',
       lastname: 'Doe',
@@ -16,7 +16,7 @@ export const useParentStore = defineStore('parent', () => {
       email: 'john.doe@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'P002',
       firstname: 'Jane',
       lastname: 'Smith',
@@ -28,7 +28,7 @@ export const useParentStore = defineStore('parent', () => {
       email: 'jane.smith@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'P003',
       firstname: 'Michael',
       lastname: 'Johnson',
@@ -40,7 +40,7 @@ export const useParentStore = defineStore('parent', () => {
       email: 'michael.johnson@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'P004',
       firstname: 'Laura',
       lastname: 'Williams',
@@ -52,7 +52,7 @@ export const useParentStore = defineStore('parent', () => {
       email: 'laura.williams@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'P005',
       firstname: 'David',
       lastname: 'Brown',
@@ -64,7 +64,7 @@ export const useParentStore = defineStore('parent', () => {
       email: 'david.brown@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'P006',
       firstname: 'Emily',
       lastname: 'Jones',
@@ -76,7 +76,7 @@ export const useParentStore = defineStore('parent', () => {
       email: 'emily.jones@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'P007',
       firstname: 'Robert',
       lastname: 'Garcia',
@@ -88,7 +88,7 @@ export const useParentStore = defineStore('parent', () => {
       email: 'robert.garcia@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'P008',
       firstname: 'Sarah',
       lastname: 'Martinez',
@@ -100,7 +100,7 @@ export const useParentStore = defineStore('parent', () => {
       email: 'sarah.martinez@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'P009',
       firstname: 'James',
       lastname: 'Lopez',
@@ -112,7 +112,7 @@ export const useParentStore = defineStore('parent', () => {
       email: 'james.lopez@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'P010',
       firstname: 'Lisa',
       lastname: 'Clark',
@@ -124,7 +124,7 @@ export const useParentStore = defineStore('parent', () => {
       email: 'lisa.clark@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'P011',
       firstname: 'Daniel',
       lastname: 'Lewis',
@@ -136,7 +136,7 @@ export const useParentStore = defineStore('parent', () => {
       email: 'daniel.lewis@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'P012',
       firstname: 'Karen',
       lastname: 'Walker',

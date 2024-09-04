@@ -7,7 +7,7 @@ defineProps<{role: 'student'|'parent'|'staff'|'administative'}>()
     <div class="">
         <div class="tw-card">
             <div class="tw-w-20 tw-h-20 md:tw-w-14 md:tw-h-14 tw-mb-4 md:tw-mb-2">
-                <q-img class="tw-rounded-fulls" src="/img/placeholder.png" />
+                <q-img class="tw-rounded-fulls" src="https://cdn.quasar.dev/img/avatar4.jpg" />
             </div>
             <div class="">
                 <p class="tw-font-bold tw-uppercase text-accent">{{ role }}</p>

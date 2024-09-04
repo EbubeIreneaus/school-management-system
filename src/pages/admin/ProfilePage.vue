@@ -12,7 +12,7 @@ import BreadCrumbs from 'src/components/BreadCrumbs.vue';
       <q-card flat :bordered="false" class=" md:tw-my-7 tw-my-4">
         <q-card-section>
           <div >
-            <q-img class="tw-w-20 tw-h-20" src="/img/placeholder.png" />
+            <q-img class="tw-w-20 tw-h-20" src="https://cdn.quasar.dev/img/avatar4.jpg" />
           </div>
           <div class="tw-my-3 text-body1">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi incidunt ipsam aperiam. Harum voluptas ipsa assumenda, sint asperiores tenetur debitis iusto, sapiente fuga tempora pariatur iure magnam nulla hic non?

@@ -2,6 +2,7 @@
 import { reactive, ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { useQuasar, useTimeout } from 'quasar';
+import WindowAppBar from 'src/components/WindowAppBar.vue';
 
 const $router = useRouter()
 const $q = useQuasar()
@@ -51,8 +52,9 @@ const submit = () => {
 </script>
 
 <template>
-  <div>
-    <div class="tw-flex tw-justify-center tw-items-center fullscreen">
+  <div class="fullscreen">
+    <WindowAppBar />
+    <div class="tw-flex tw-justify-center tw-items-center tw-h-full">
       <q-card class="tw-max-w-md tw-w-full tw-p-4" flat>
         <q-card-section>
           <div class="text-h4">Sign In</div>

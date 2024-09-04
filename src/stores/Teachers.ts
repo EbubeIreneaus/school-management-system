@@ -5,7 +5,7 @@ import { ref } from 'vue';
 export const useTeacherStore = defineStore('teachers', () => {
   const teachers = ref([
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'T001',
       firstname: 'Alice',
       lastname: 'Johnson',
@@ -20,7 +20,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       email: 'alice.johnson@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'T002',
       firstname: 'Brian',
       lastname: 'Smith',
@@ -35,7 +35,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       email: 'brian.smith@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'T003',
       firstname: 'Catherine',
       lastname: 'Williams',
@@ -50,7 +50,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       email: 'catherine.williams@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'T004',
       firstname: 'David',
       lastname: 'Brown',
@@ -65,7 +65,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       email: 'david.brown@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'T005',
       firstname: 'Emma',
       lastname: 'Jones',
@@ -80,7 +80,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       email: 'emma.jones@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'T006',
       firstname: 'Frank',
       lastname: 'Garcia',
@@ -95,7 +95,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       email: 'frank.garcia@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'T007',
       firstname: 'Grace',
       lastname: 'Martinez',
@@ -110,7 +110,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       email: 'grace.martinez@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'T008',
       firstname: 'Henry',
       lastname: 'Lopez',
@@ -125,7 +125,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       email: 'henry.lopez@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'T009',
       firstname: 'Irene',
       lastname: 'Clark',
@@ -140,7 +140,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       email: 'irene.clark@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'T010',
       firstname: 'Jack',
       lastname: 'Lewis',
@@ -155,7 +155,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       email: 'jack.lewis@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'T011',
       firstname: 'Karen',
       lastname: 'Hall',
@@ -170,7 +170,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       email: 'karen.hall@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'T012',
       firstname: 'Leo',
       lastname: 'Young',
@@ -185,7 +185,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       email: 'leo.young@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'T013',
       firstname: 'Megan',
       lastname: 'King',
@@ -200,7 +200,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       email: 'megan.king@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'T014',
       firstname: 'Nathan',
       lastname: 'Allen',
@@ -215,7 +215,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       email: 'nathan.allen@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'T015',
       firstname: 'Olivia',
       lastname: 'Scott',
@@ -230,7 +230,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       email: 'olivia.scott@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'T016',
       firstname: 'Paul',
       lastname: 'Green',
@@ -245,7 +245,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       email: 'paul.green@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'T017',
       firstname: 'Quinn',
       lastname: 'Adams',
@@ -260,7 +260,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       email: 'quinn.adams@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'T018',
       firstname: 'Rachel',
       lastname: 'Baker',
@@ -275,7 +275,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       email: 'rachel.baker@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'T018',
       firstname: 'Rachel',
       lastname: 'Baker',
@@ -290,7 +290,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       email: 'rachel.baker@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'T019',
       firstname: 'Samuel',
       lastname: 'Harris',
@@ -305,7 +305,7 @@ export const useTeacherStore = defineStore('teachers', () => {
       email: 'samuel.harris@example.com',
     },
     {
-      img: '/img/placeholder.png',
+      img: 'https://cdn.quasar.dev/img/avatar4.jpg',
       id: 'T020',
       firstname: 'Tina',
       lastname: 'Carter',

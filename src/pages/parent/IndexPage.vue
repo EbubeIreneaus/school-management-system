@@ -50,7 +50,7 @@ const notices: any = useNoticeStore().notices
         </div>
 
         <div class="nq-col-sm-12 nq-col-lg-6">
-          <q-scroll-area class="tw-h-[300px]">
+          <q-scroll-area class="tw-h-[350px]">
             <q-card>
               <q-toolbar
                 class="tw-z-50 tw-sticky tw-top-0 tw-w-full"
