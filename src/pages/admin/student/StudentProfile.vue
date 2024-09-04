@@ -69,8 +69,8 @@ let student: any = useStudentStore().get_student_or_404(regNo.toString())
           </div>
         </q-card-section>
         <q-card-section class="tw-flex tw-gap-5">
-          <q-btn label="suspend" />
-          <q-btn label="Expel" />
+          <q-btn label="suspend" unelevated color="warning" />
+          <q-btn label="Expel" unelevated color="red-10" />
         </q-card-section>
       </q-card>
     </div>

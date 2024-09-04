@@ -86,7 +86,7 @@ const test: any = useTestStore().assessments;
     <div>
 
       <q-scroll-area style="height: 500px">
-          <q-card>
+          <q-card flat :bordered="false">
             <q-card-section>
               <q-table
                 title="Assesment"

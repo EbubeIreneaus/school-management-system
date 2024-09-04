@@ -1,25 +1,90 @@
 <script lang="ts" setup>
-import ParentSignInComponent from 'src/components/Auth/ParentSignInComponent.vue';
-import StudentSignInComponent from 'src/components/Auth/StudentSignInComponent.vue';
-import { ref } from 'vue';
+import { reactive, ref } from 'vue';
+import { useRouter } from 'vue-router';
+import { useQuasar, useTimeout } from 'quasar';
 
-const parentSignInDialog = ref<boolean>(false)
-const studentSignInDialog = ref<boolean>(false)
+const $router = useRouter()
+const $q = useQuasar()
+const isRegistering = ref(false)
+
+const {registerTimeout} = useTimeout()
+
+type User = {
+  id: null | string;
+  password: null | string;
+};
+const user = reactive<User>({
+  id: null,
+  password: null,
+});
+
+function submitFunction(){
+  if (user.id?.startsWith('ad')) {
+    $router.push('/admin/')
+    return
+  }
+
+  if (user.id?.toLocaleLowerCase().startsWith('s')) {
+    $router.push('/student/')
+    return
+  }
+
+  if (user.id?.toLocaleLowerCase().startsWith('p')) {
+    $router.push('/parent/')
+    return
+  }
+
+$q.notify({
+  color: 'red-10',
+  message: 'invalid user credentials',
+  icon: 'warning',
+  iconSize: 'small'
+})
+isRegistering.value = false
+return
+}
+const submit = () => {
+  isRegistering.value = true
+  registerTimeout(submitFunction, 3000)
+
+};
 </script>
 
 <template>
-  <div class=" column justify-center items-center q-col-gutter-y-lg fullscreen">
-    <div class=" text-h2 text-weight-bold">I'M</div>
-    <div class="row justify-evenly wrap q-gutter-x-md">
-      <q-btn label="A Student" class="col-auto" @click="()=>studentSignInDialog = true" />
-      <q-btn label="A Parent"  class="col-auto" @click="()=> parentSignInDialog = true" />
+  <div>
+    <div class="tw-flex tw-justify-center tw-items-center fullscreen">
+      <q-card class="tw-max-w-md tw-w-full tw-p-4" flat>
+        <q-card-section>
+          <div class="text-h4">Sign In</div>
+        </q-card-section>
+        <q-form @submit.prevent="submit">
+          <q-card-section>
+            <q-input
+              v-model="user.id"
+              label="Id"
+              filled
+              class="tw-mb-3"
+              required
+            />
+
+            <q-input
+              type="password"
+              v-model="user.password"
+              label="password"
+              filled
+              class="tw-mb-3"
+              required
+            />
+
+            <div class="text-right text-accent">
+              <router-link to="">reset password?</router-link>
+            </div>
+          </q-card-section>
+          <q-card-section>
+            <q-btn label="sign in" unelevated color="green-10" type="submit" :loading="isRegistering ? true : false" />
+          </q-card-section>
+        </q-form>
+      </q-card>
     </div>
   </div>
-  <parent-sign-in-component v-if="parentSignInDialog" @close="parentSignInDialog = false"/>
-  <student-sign-in-component v-if="studentSignInDialog" @close="studentSignInDialog = false" />
 </template>
-
-<style lang="scss" scoped>
-
-</style>
-

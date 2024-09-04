@@ -6,6 +6,7 @@ import { reactive, ref, watch } from 'vue';
 import { useStudentStore } from 'src/stores/Students';
 import { QSpinnerFacebook } from 'quasar';
 import { useQuasar } from 'quasar';
+import { RouterLink } from 'vue-router';
 
 const $q = useQuasar();
 
@@ -125,7 +126,7 @@ watch(
                 alt="Bonnie image"
               />
               <h6 class="tw-mb-1 tw-text-xl tw-font-medium text-accent">
-                {{ student.firstname }} {{ student.lastname }}
+                <RouterLink :to="`/admin/student/${student.reg_no}`">{{ student.firstname }} {{ student.lastname }}</RouterLink>
               </h6>
               <div class="tw-grid tw-grid-cols-2 tw-gap-2">
                 <div>

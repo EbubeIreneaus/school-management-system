@@ -9,31 +9,31 @@ const eventsObj = [
   {
     title: 'Team Meeting',
     event: 'Quarterly Strategy Discussion',
-    date: '2024/08/05',
+    date: '2024/09/05',
     time: '10:00 AM',
   },
   {
     title: 'Product Launch',
     event: 'New Software Release',
-    date: '2024/08/12',
+    date: '2024/09/12',
     time: '02:00 PM',
   },
   {
     title: 'Client Presentation',
     event: 'Project Update Meeting',
-    date: '2024/08/15',
+    date: '2024/09/15',
     time: '11:00 AM',
   },
   {
     title: 'Workshop',
     event: 'UI/UX Design Workshop',
-    date: '2024/08/20',
+    date: '2024/09/20',
     time: '08:00 AM',
   },
   {
     title: 'Webinar',
     event: 'Tech Trends in 2024',
-    date: '2024/08/25',
+    date: '2024/09/25',
     time: '04:00 PM',
   },
 ];
@@ -53,7 +53,6 @@ options.value.push(calendarDate.value)
       event-color="orange"
       :options="options"
       :events="event"
-      :dark="true"
       title="Events"
       flat
       color="grey"

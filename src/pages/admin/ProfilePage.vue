@@ -74,8 +74,8 @@ import BreadCrumbs from 'src/components/BreadCrumbs.vue';
         </q-card-section>
 
         <q-card-actions>
-          <q-btn label="Edit information" />
-          <q-btn label="Deactivate" />
+          <q-btn label="Edit information" unelevated />
+          <q-btn label="Deactivate" unelevated color="red-10" />
         </q-card-actions>
       </q-card>
     </div>

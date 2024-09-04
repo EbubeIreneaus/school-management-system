@@ -78,8 +78,8 @@ let parent: any = useParentStore().get_parent_or_404(parentId.toString());
           </div>
         </q-card-section>
         <q-card-section class="tw-flex tw-gap-5">
-          <q-btn label="suspend" />
-          <q-btn label="Delete Account" color="red-10" />
+          <q-btn label="suspend"  unelevated color="warning"/>
+          <q-btn label="Delete Account" unelevated color="red-10" />
         </q-card-section>
       </q-card>
     </div>

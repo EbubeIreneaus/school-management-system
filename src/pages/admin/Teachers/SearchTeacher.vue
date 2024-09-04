@@ -105,7 +105,7 @@ watch(
           <q-card
             class="tw-w-full tw-border tw-rounded-lg tw-shadow"
             v-for="teacher in teachers"
-            :key="teacher.reg_no"
+            :key="teacher.id"
           >
             <q-card-section class="tw-flex tw-flex-col tw-pb-10">
               <q-img
@@ -114,7 +114,7 @@ watch(
                 alt="Bonnie image"
               />
               <h6 class="tw-mb-1 tw-text-xl tw-font-medium text-accent">
-                {{ teacher.firstname }} {{ teacher.lastname }}
+                <RouterLink :to="`/admin/teacher/${teacher.id}`">{{ teacher.firstname }} {{ teacher.lastname }}</RouterLink>
               </h6>
               <div class="tw-grid tw-grid-cols-2 tw-gap-2">
                 <div>

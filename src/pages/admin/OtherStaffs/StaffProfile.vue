@@ -55,11 +55,11 @@ let staff: any = useStaffStore().get_staff_or_404(id.toString())
 
           </div>
         </q-card-section>
-        <q-card-section class="tw-flex tw-gap-5">
-          <q-btn label="suspend" />
-          <q-btn label="Make Admin" color="green-10" v-if="!staff.isAdmin" />
-          <q-btn label="Remove Admin" color="warning" v-else/>
-          <q-btn label="Delete Account" color="red-10" />
+        <q-card-section class="tw-flex tw-flex-wrap tw-gap-5">
+          <q-btn label="suspend" unelevated color="warning" />
+          <q-btn label="Make Admin" unelevated color="green-10" v-if="!staff.isAdmin" />
+          <q-btn label="Remove Admin" unelevated color="warning" v-else/>
+          <q-btn label="Delete Account" unelevated color="red-10" />
         </q-card-section>
       </q-card>
     </div>

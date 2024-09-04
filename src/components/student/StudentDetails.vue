@@ -10,7 +10,7 @@ const student: any = get_student_or_404(props.reg_no);
 </script>
 
 <template>
-  <q-card>
+  <q-card flat :bordered="false">
     <q-card-section>
       <div>My Informations</div>
     </q-card-section>

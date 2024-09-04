@@ -14,7 +14,7 @@ import { useQuasar } from 'quasar';
 const $quasar = useQuasar()
 let options = {
   title: {
-    text: 'Student Attendance',
+    text: 'Fees Collection',
     style: {
       color: 'grey',
     },

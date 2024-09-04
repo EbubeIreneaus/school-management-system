@@ -10,7 +10,7 @@ const student: any = get_student_or_404(props.reg_no);
 </script>
 
 <template>
-  <q-card class="tw-max-w-[500px]">
+  <q-card class="tw-max-w-[500px]" flat :bordered="false" >
       <div class="tw-p-2">My Child</div>
     <q-card-section class="tw-flex tw-flex-col md:tw-flex-row tw-gap-5">
       <div>

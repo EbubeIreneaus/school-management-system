@@ -119,6 +119,7 @@ const newCourse = reactive({
         title="My Course"
         title-class="text-h4 text-weight-bold text-accent"
         class="tw-w-full"
+        separator="cell"
       >
       </q-table>
     </div>

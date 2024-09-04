@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div class="tw-grid md:tw-grid-cols-2 tw-gap-y-6 tw-gap-3 q-pa-md md:q-my-none md:tw-h-full tw-h-[500px]">
+  <div class="tw-grid md:tw-grid-cols-2 tw-gap-y-6 tw-gap-3 q-pa-md md:q-my-none md:tw-h-full tw-h-[500px] tw-text-white">
     <q-card class="md:tw-max-w-[250px] tw-bg-gradient-to-tr tw-from-blue-950 tw-to-blue-700 tw-py-3 tw-px-4" flat square>
       <div>
         <div><q-icon name="fa-brands fa-facebook" /></div>

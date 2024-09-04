@@ -311,8 +311,8 @@ const parentResponsibility = [
         </q-card-section>
 
         <q-card-section class="tw-flex tw-gap-5">
-          <q-btn label="Submit" class="tw-px-10" icon="send" />
-          <q-btn label="Reset" class="tw-px-10" icon="history" />
+          <q-btn label="Submit" class="tw-px-10" icon="send" unelevated color="green-10" />
+          <q-btn label="Reset" class="tw-px-10" icon="history" unelevated color="warning" />
         </q-card-section>
       </q-card>
     </div>

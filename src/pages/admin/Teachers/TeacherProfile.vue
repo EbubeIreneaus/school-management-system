@@ -59,14 +59,14 @@ let teacher: any = useTeacherStore().get_teacher_or_404(id.toString())
             <div>
               <div class="text-body1">{{ teacher.mobile_no }}</div>
               <div class="text-body2 tw-text-gray-500">Phone Number</div>
-            </div> 
+            </div>
 
           </div>
         </q-card-section>
         <q-card-section class="tw-flex tw-gap-5">
-          <q-btn label="suspend" />
-          <q-btn label="Make Admin" color="green-10" />
-          <q-btn label="Delete Account" color="red-10" />
+          <q-btn label="suspend" unelevated color="warning" />
+          <q-btn label="Make Admin" unelevated color="green-10" />
+          <q-btn label="Delete Account" unelevated color="red-10" />
         </q-card-section>
       </q-card>
     </div>
