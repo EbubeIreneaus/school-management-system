@@ -19,17 +19,17 @@ const user = reactive<User>({
 });
 
 function submitFunction(){
-  if (user.id?.startsWith('ad')) {
+  if (user.id?.startsWith('admin')) {
     $router.push('/admin/')
     return
   }
 
-  if (user.id?.toLocaleLowerCase().startsWith('s')) {
+  if (user.id?.toLocaleLowerCase().startsWith('student')) {
     $router.push('/student/')
     return
   }
 
-  if (user.id?.toLocaleLowerCase().startsWith('p')) {
+  if (user.id?.toLocaleLowerCase().startsWith('parent')) {
     $router.push('/parent/')
     return
   }
